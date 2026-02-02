@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["cyrillic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+export const unifraktur = localFont({
+  src: [
+    {
+      path: "./fonts/UnifrakturMaguntia-Book.woff",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-unifractur",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${unifraktur.variable} antialiased`}
       >
         {children}
       </body>

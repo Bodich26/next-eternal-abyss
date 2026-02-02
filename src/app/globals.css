@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --blacks-100: #090909;
+  --blacks-200: #080808;
+  --blacks-300: #0d0d0d;
+  --whites-100: #ffffff;
+  --whites-200: #d4d4d4;
+  --accent: #69399d;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--blacks-200);
+  --color-foreground: var(--whites-100);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -20,7 +24,35 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--blacks-200);
+  color: var(--whites-100);
+  font-weight: 400;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-unifractur {
+  font-family: var(--font-unifractur), serif;
+}
+
+.main-gradient-90-deg {
+  background: linear-gradient(
+    90deg,
+    var(--blacks-100) 0%,
+    var(--blacks-300) 100%
+  );
+}
+
+.bg-gradient-90-deg {
+  background: linear-gradient(
+    90deg,
+    rgb(from var(--blacks-200) r g b / 1) 0%,
+    rgb(from var(--blacks-200) r g b / 0.8) 7%,
+    rgb(from var(--blacks-200) r g b / 0.6) 14%,
+    rgb(from var(--blacks-200) r g b / 0.4) 20%,
+    rgb(from var(--blacks-200) r g b / 0.15) 50%,
+    rgb(from var(--blacks-200) r g b / 0.2) 83%,
+    rgb(from var(--blacks-200) r g b / 0.6) 92%,
+    rgb(from var(--blacks-200) r g b / 0.9) 100%
+  );
 }
