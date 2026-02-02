@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import localFont from "next/font/local";
+import { Header } from "@/widgets/header";
+import { Footer } from "@/widgets/footer";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["cyrillic"],
+  subsets: ["latin", "cyrillic"],
 });
 
 export const unifraktur = localFont({
@@ -35,7 +37,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${unifraktur.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

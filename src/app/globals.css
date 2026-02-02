@@ -10,10 +10,15 @@
 }
 
 @theme inline {
-  --color-background: var(--blacks-200);
-  --color-foreground: var(--whites-100);
+  --color-blacks-100: var(--blacks-100);
+  --color-blacks-200: var(--blacks-200);
+  --color-blacks-300: var(--blacks-300);
+  --color-whites-100: var(--whites-100);
+  --color-whites-200: var(--whites-200);
+  --color-accent: var(--accent);
+
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-unifractur: var(--font-unifractur);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +33,7 @@ body {
   color: var(--whites-100);
   font-weight: 400;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 .title-unifractur {
@@ -55,4 +60,8 @@ body {
     rgb(from var(--blacks-200) r g b / 0.6) 92%,
     rgb(from var(--blacks-200) r g b / 0.9) 100%
   );
+}
+
+.shadow-block {
+  box-shadow: 0px 4px 4px 0px rgba(9, 9, 9, 0.25);
 }
