@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "title": "Shadows of the Void",
+    "releaseYear": 2024,
+    "shortDescription": "Дебютный полноформатник, полный хаоса и брейкдаунов",
+    "tracklist": [
+      "Intro: Descent",
+      "Abyssal Throne",
+      "Graves of Eternity",
+      "Bleed the Sky",
+      "Voidborn",
+      "Crown of Ruin",
+      "Eternal Collapse"
+    ],
+    "image": "https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=1200&q=80",
+    "coverColor": "#0a0000"
+  },
+  {
+    "id": "2",
+    "title": "Grave Dominion",
+    "releaseYear": 2023,
+    "shortDescription": "EP с самыми тяжёлыми breakdowns в истории группы",
+    "tracklist": ["Dominion", "Buried Alive", "Flesh Harvest", "No Salvation"],
+    "image": "https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80",
+    "coverColor": "#1a0000"
+  },
+  {
+    "id": "3",
+    "title": "Necrotic Sermons",
+    "releaseYear": 2025,
+    "shortDescription": "Концептуальный альбом о конце света",
+    "tracklist": [
+      "Sermon I: Awakening",
+      "Plague Eternal",
+      "Sermon II: Collapse",
+      "Ashen Prayers",
+      "Final Sermon"
+    ],
+    "image": "https://images.unsplash.com/photo-1504197837121-8d3c574a5d7e?w=1200&q=80",
+    "coverColor": "#000814"
+  },
+  {
+    "id": "4",
+    "title": "Womb of Carrion",
+    "releaseYear": 2022,
+    "shortDescription": "Демо, с которого всё началось",
+    "tracklist": ["Carrion Birth", "Rotting Embrace", "Womb of Decay"],
+    "image": "https://images.unsplash.com/photo-1547891654-e66ed7eb0d7b?w=1200&q=80",
+    "coverColor": "#0f0005"
+  },
+  {
+    "id": "5",
+    "title": "Abyssal Descent Tour Live",
+    "releaseYear": 2026,
+    "shortDescription": "Живой альбом с тура — чистый адреналин",
+    "tracklist": [
+      "Live: Voidborn",
+      "Live: Bleed the Sky",
+      "Live: Crown of Ruin"
+    ],
+    "image": "https://images.unsplash.com/photo-1506157786151-b4891330f8a8?w=1200&q=80",
+    "coverColor": "#12000a"
+  },
+  {
+    "id": "6",
+    "title": "Crown of Maggots",
+    "releaseYear": 2025,
+    "shortDescription": "Сингл, взорвавший TikTok в metal-сообществе",
+    "tracklist": ["Crown of Maggots", "Maggot Throne"],
+    "image": "https://images.unsplash.com/photo-1557683311-973673baf050?w=1200&q=80",
+    "coverColor": "#080001"
+  },
+  {
+    "id": "7",
+    "title": "Eternal Collapse",
+    "releaseYear": 2024,
+    "shortDescription": "Переиздание с бонус-треками и новой обложкой",
+    "tracklist": ["Collapse", "Eternal", "Bonus: Silent Abyss"],
+    "image": "https://images.unsplash.com/photo-1544194215-99a969a0a9d9?w=1200&q=80",
+    "coverColor": "#000000"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "title": "Shadows of the Void Hoodie",
+    "price": 59.99,
+    "currency": "USD",
+    "shortDescription": "Чёрное худи с полной обложкой альбома",
+    "sizes": ["S", "M", "L", "XL", "2XL"],
+    "image": "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80"
+  },
+  {
+    "id": "2",
+    "title": "Eternal Abyss Logo T-Shirt",
+    "price": 29.99,
+    "currency": "USD",
+    "shortDescription": "Классическая чёрная футболка с готическим лого",
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1557683311-973673baf050?w=800&q=80"
+  },
+  {
+    "id": "3",
+    "title": "Abyssal Descent Tour Poster",
+    "price": 14.99,
+    "currency": "USD",
+    "shortDescription": "A2-постер с датами тура и черепом",
+    "sizes": ["A2"],
+    "image": "https://images.unsplash.com/photo-1506157786151-b4891330f8a8?w=800&q=80"
+  },
+  {
+    "id": "4",
+    "title": "Crown of Maggots Beanie",
+    "price": 24.99,
+    "currency": "USD",
+    "shortDescription": "Чёрная шапка с вышитым названием сингла",
+    "sizes": ["One Size"],
+    "image": "https://images.unsplash.com/photo-1504197837121-8d3c574a5d7e?w=800&q=80"
+  },
+  {
+    "id": "5",
+    "title": "Necrotic Sermons Vinyl LP",
+    "price": 34.99,
+    "currency": "USD",
+    "shortDescription": "Лимитированный чёрный винил + цифровой код",
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1547891654-e66ed7eb0d7b?w=800&q=80"
+  },
+  {
+    "id": "6",
+    "title": "Voidborn Patch Set",
+    "price": 12.99,
+    "currency": "USD",
+    "shortDescription": "Набор из 5 нашивок с треками альбома",
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&q=80"
+  },
+  {
+    "id": "7",
+    "title": "Eternal Abyss Enamel Pin",
+    "price": 9.99,
+    "currency": "USD",
+    "shortDescription": "Металлический пин с лого группы",
+    "sizes": ["One Size"],
+    "image": "https://images.unsplash.com/photo-1544194215-99a969a0a9d9?w=800&q=80"
+  }
+]
