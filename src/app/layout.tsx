@@ -38,7 +38,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${unifraktur.variable} antialiased`}
       >
         <Header />
-        {children}
+        <main className="pt-[68px]">{children}</main>
         <Footer />
       </body>
     </html>

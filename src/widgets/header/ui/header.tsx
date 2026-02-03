@@ -7,10 +7,10 @@ import { usePathname } from "next/navigation";
 export const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="w-full bg-blacks-100 shadow-block py-1.5 fixed">
-      <Container className="flex justify-center items-center">
-        <nav className="flex justify-center items-center gap-8">
-          <ul className="flex gap-8 items-center">
+    <header className="fixed top-0 left-0 w-full bg-blacks-100 shadow-block z-50 py-1.5">
+      <Container>
+        <nav className="flex justify-around items-center flex-wrap">
+          <ul className="flex gap-8 items-center flex-wrap">
             {headerLinkLeft.map((item, index) => {
               const isActive = pathname === item.href;
               return (
@@ -24,13 +24,17 @@ export const Header = () => {
                 </li>
               );
             })}
-            <Image
-              className="mx-22.75"
-              src="/logo/logo.png"
-              alt="Logo"
-              width={58}
-              height={56}
-            />
+          </ul>
+
+          <Image
+            className=""
+            src="/logo/logo.png"
+            alt="Logo"
+            width={58}
+            height={56}
+          />
+
+          <ul className="flex gap-8 items-center flex-wrap">
             {headerLinkRight.map((item, index) => {
               const isActive = pathname === item.href;
               return (
