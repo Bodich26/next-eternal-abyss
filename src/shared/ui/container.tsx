@@ -3,9 +3,9 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const Container = ({ children }: Props) => {
+export const Container = ({ children, className }: Props) => {
   return (
-    <div className={`max-w-[1390px] px-3.75 mx-auto max-md:px-2`}>
+    <div className={`max-w-[1390px] px-3.75 mx-auto max-md:px-2 ${className}`}>
       {children}
     </div>
   );
