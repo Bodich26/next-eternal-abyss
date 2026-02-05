@@ -18,7 +18,7 @@
   --color-accent: var(--accent);
 
   --font-sans: var(--font-geist-sans);
-  --font-unifractur: var(--font-unifractur);
+  --font-unifractur: var(--font-unifractur), serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,10 +34,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-}
-
-.title-unifractur {
-  font-family: var(--font-unifractur), serif;
 }
 
 .main-gradient-90-deg {
@@ -64,4 +60,35 @@ body {
 
 .shadow-block {
   box-shadow: 0px 4px 4px 0px rgba(9, 9, 9, 0.25);
+}
+
+.bg-main {
+  background-image: url("/main-bg.jpg");
+  background-size: center;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  min-height: 72vh;
+}
+
+@media (max-width: 1348px) {
+  .mobile-block-album {
+    padding-right: 30px;
+    padding-left: 271px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .mobile-block-album {
+    padding-right: 15px;
+    padding-left: 150px;
+  }
+}
+
+@media (max-width: 1210px) {
+  .mobile-block-album {
+    padding-right: 15px;
+    padding-left: 250px;
+  }
 }
