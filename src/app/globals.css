@@ -46,7 +46,7 @@ body {
 
 .bg-gradient-90-deg {
   background: linear-gradient(
-    90deg,
+    180deg,
     rgb(from var(--blacks-200) r g b / 1) 0%,
     rgb(from var(--blacks-200) r g b / 0.8) 7%,
     rgb(from var(--blacks-200) r g b / 0.6) 14%,
@@ -70,6 +70,16 @@ body {
 
   width: 100%;
   min-height: 72vh;
+}
+
+.bg-group {
+  background-image: url("/bg-group.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  min-height: 73vh;
+  opacity: 0.25;
 }
 
 @media (max-width: 1348px) {
