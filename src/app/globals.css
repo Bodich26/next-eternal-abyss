@@ -73,13 +73,41 @@ body {
 }
 
 .bg-group {
+  position: relative;
+  width: 100%;
+  min-height: 73vh;
+  overflow: hidden;
+}
+
+/* Слой с КАРТИНКОЙ */
+.bg-group__image {
+  position: absolute;
+  inset: 0;
+
   background-image: url("/bg-group.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 
-  width: 100%;
-  min-height: 73vh;
-  opacity: 0.25;
+  opacity: 0.25; /* ← ТОЛЬКО КАРТИНКА */
+  z-index: 0;
+}
+
+.title-decor {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.title-decor::before,
+.title-decor::after {
+  content: "";
+  min-width: 18px;
+  min-height: 18px;
+  background-color: var(--accent);
+  transform: rotate(-45deg);
+  display: inline-block;
 }
 
 @media (max-width: 1348px) {
@@ -93,6 +121,9 @@ body {
   .mobile-block-album {
     padding-right: 15px;
     padding-left: 150px;
+  }
+  .mobile-block-about {
+    gap: 32px;
   }
 }
 
