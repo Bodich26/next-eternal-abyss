@@ -1,4 +1,4 @@
-import { Container, CustomButton } from "@/shared";
+import { Container, CustomButtonLink } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
@@ -33,7 +33,12 @@ export default function Home() {
                 возрождения, борьбы со злом. Через ярость, тьму и хаос музыка
                 ведёт к восстановлению справедливости.
               </p>
-              <CustomButton text={"Все Альбомы"} Icon={ArrowRight} />
+              <CustomButtonLink
+                text={"Все Альбомы"}
+                Icon={ArrowRight}
+                link="/album"
+                className="w-[190px]"
+              />
             </div>
           </div>
           <div className="absolute left-[15px] top-1/2 -translate-y-1/2">
@@ -46,6 +51,12 @@ export default function Home() {
             />
           </div>
         </Container>
+      </section>
+      <section className="mt-[100px]">
+        <div className="bg-group relative">
+          <div className="bg-gradient-90-deg absolute left-0 right-0 top-0 bottom-0" />
+          <Container>fff</Container>
+        </div>
       </section>
     </>
   );
