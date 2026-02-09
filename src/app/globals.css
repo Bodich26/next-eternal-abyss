@@ -72,6 +72,21 @@ body {
   min-height: 72vh;
 }
 
+.bg-section-news {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/logo/text-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.05;
+  z-index: -1;
+
+  width: 100%;
+}
+
 .bg-group {
   position: relative;
   width: 100%;
