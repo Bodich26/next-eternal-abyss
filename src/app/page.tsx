@@ -1,6 +1,8 @@
+import { TourItem } from "@/entities/tours";
 import { Container, CustomButtonLink, Titles } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -37,7 +39,7 @@ export default function Home() {
                 text={"Все Альбомы"}
                 Icon={ArrowRight}
                 link="/album"
-                className="w-[190px]"
+                className="w-[190px] justify-center"
               />
             </div>
           </div>
@@ -56,8 +58,8 @@ export default function Home() {
         <div className="bg-group">
           <div className="bg-group__image" />
           <div className="bg-gradient-90-deg absolute inset-0 z-[1]" />
-          <Container className="mobile-block-about py-[80px] relative z-[2] flex justify-between items-center gap-[101px] max-md:flex-col-reverse  max-md:items-center ">
-            <div className="flex-1 min-w-0 text-center">
+          <Container className="mobile-block-about py-[80px] relative z-[2] flex justify-between items-center gap-[101px] max-lg:flex-col-reverse  max-lg:items-center ">
+            <div className="flex-1 min-w-0 max-lg:text-center">
               <Titles text="Музыка и идея группы" as="h2" />
               <p className="mt-4 tracking-wide text-[18px]">
                 Eternal Abyss — deathcore-группа, для которой музыка является
@@ -72,27 +74,54 @@ export default function Home() {
               <CustomButtonLink
                 text="Узнать Больше"
                 link="/about"
-                className="w-[190px] mt-[58px] justify-center max-md:mr-auto max-md:ml-auto"
+                className="w-[190px] mt-[58px] justify-center max-lg:mr-auto max-lg:ml-auto"
               />
             </div>
-            <div className="shrink-0 relative w-[595px] h-[554px] max-lg:w-[450px] max-md:w-full">
+            <div className="shrink-0 relative w-[595px] h-[554px] max-md:w-full max-sm:h-[700px]">
               <Image
                 src={"/poster-2.jpg"}
                 alt={"People1"}
                 width={324}
                 height={301}
-                className="z-1 object-cover object-center w-[324px] h-[301px] absolute border-2 border-whites-200 rounded-md shadow-block bottom-0 left-0"
+                className="z-1 object-cover object-center w-[324px] h-[301px] absolute border-2 border-whites-200 rounded-md shadow-block bottom-0 left-0 max-sm:w-full"
               />
               <Image
                 src={"/poster-1.jpg"}
                 alt={"People2"}
                 width={393}
                 height={474}
-                className="object-cover object-center w-[393px] h-[474px] absolute border-2 border-whites-200 rounded-md shadow-block right-0 top-0"
+                className="object-cover object-center w-[393px] h-[474px] absolute border-2 border-whites-200 rounded-md shadow-block right-0 top-0 max-sm:w-full"
               />
             </div>
           </Container>
         </div>
+      </section>
+      <section className="mt-[120px]">
+        <Container className="">
+          <div className="flex justify-between items-center mb-[39px] flex-wrap gap-2">
+            <Link
+              href={"/tour"}
+              className="inline-flex items-center gap-2 text-accent border-accent border-b text-[18px]"
+            >
+              Посмотреть все туры
+              <ArrowRight width={24} height={24} />
+            </Link>
+            <Titles text={"ТУРЫ И КОНЦЕРТЫ"} as={"h3"} />
+          </div>
+          <div className=" grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <TourItem
+                key={index}
+                id={String(index)}
+                date={"15 Марта"}
+                time={"20:00"}
+                country={"Берлин, Германия"}
+                venue={"Клуб"}
+                venueName={"Black Void"}
+              />
+            ))}
+          </div>
+        </Container>
       </section>
     </>
   );
