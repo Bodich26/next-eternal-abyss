@@ -1,3 +1,4 @@
+import { MerchImageItem } from "@/entities/merch";
 import { TourItem } from "@/entities/tours";
 import { Container, CustomButtonLink, Titles } from "@/shared";
 import { ArrowRight } from "lucide-react";
@@ -97,7 +98,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-[120px]">
-        <Container className="">
+        <Container>
           <div className="flex justify-between items-center mb-[39px] flex-wrap gap-2">
             <Link
               href={"/tour"}
@@ -108,7 +109,7 @@ export default function Home() {
             </Link>
             <Titles text={"ТУРЫ И КОНЦЕРТЫ"} as={"h3"} />
           </div>
-          <div className=" grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
+          <div className=" grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:overflow-y-auto max-sm:h-[80vh]">
             {Array.from({ length: 6 }).map((_, index) => (
               <TourItem
                 key={index}
@@ -120,6 +121,68 @@ export default function Home() {
                 venueName={"Black Void"}
               />
             ))}
+          </div>
+        </Container>
+      </section>
+      <section className="mt-[120px] pt-[33px] pb-[78px] main-gradient-90-deg relative">
+        <Container>
+          <span className="max-md:hidden absolute w-full left-0 right-0 h-[1px] bg-whites-100/15 rounded-md top-[134px]" />
+          <span className="max-md:hidden absolute w-full left-0 right-0 h-[1px] bg-whites-100/15 rounded-md bottom-[182px]" />
+          <span className="max-md:hidden absolute w-[1px] top-0 bottom-0 h-full bg-whites-100/15 rounded-md right-[200px]" />
+          <span className="max-md:hidden absolute w-[1px] top-0 bottom-0 h-full bg-whites-100/15 rounded-md right-[270px]" />
+          <span className="max-md:hidden absolute w-[1px] top-0  bottom-0 h-full bg-whites-100/15 rounded-md left-[200px]" />
+          <span className="max-md:hidden absolute w-[1px] top-0  bottom-0 h-full bg-whites-100/15 rounded-md left-[270px]" />
+          <div className="mb-[39px] flex justify-center">
+            <Titles text={"Наш Мерч"} as={"h3"} />
+          </div>
+          <div className=" grid grid-cols-4 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:overflow-y-auto max-sm:h-[80vh]">
+            {Array.from({ length: 4 }).map((_, index) => (
+              <MerchImageItem key={index} image={"/merch/1.jpg"} />
+            ))}
+          </div>
+          <CustomButtonLink
+            text={"Посмотреть Все"}
+            Icon={ArrowRight}
+            link="/merch"
+            className="w-[200px] justify-center m-auto mt-[58px] block"
+          />
+        </Container>
+      </section>
+      <section className="mt-[120px]">
+        <Container className="relative">
+          <div className="bg-section-news" />
+          <div className="  flex flex-col gap-8 justify-center items-center text-center">
+            <div className="w-[504px]">
+              <Titles as="h3" text="Новости группы" />
+              <p className="text-[18px]">
+                Подпишись на рассылку Eternal Abyss и следи за всеми
+                обновлениями: музыка, туры, закулисье и важные анонсы напрямую
+                от группы.
+              </p>
+            </div>
+            <form
+              action=""
+              className="w-[504px] flex flex-col justify-center items-center gap-6"
+            >
+              <input
+                type="email"
+                required
+                placeholder="example@mail.com"
+                className="border border-whites-200 rounded-md w-full py-2 px-3 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent placeholder:text-whites-300"
+              />
+              <input
+                type="text"
+                required
+                placeholder="Введите псевдоним"
+                className="border border-whites-200 rounded-md w-full py-2 px-3 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent placeholder:text-whites-300"
+              />
+              <button
+                type="submit"
+                className="px-5 py-3 bg-accent rounded-md cursor-pointer flex items-center justify-center gap-2.5 w-full"
+              >
+                Подписаться
+              </button>
+            </form>
           </div>
         </Container>
       </section>
