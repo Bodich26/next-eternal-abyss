@@ -47,7 +47,7 @@ export const Header = () => {
                 <li key={index}>
                   <Link
                     href={item.href}
-                    className={`uppercase tracking-widest text-base font-medium hover:text-accent transition-colors ${isActive ? "text-accent" : "text-whites-100"}`}
+                    className={`uppercase text-base font-medium hover:text-accent transition-colors ${isActive ? "text-accent" : "text-whites-100"}`}
                   >
                     {item.label}
                   </Link>
