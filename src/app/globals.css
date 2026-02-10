@@ -125,6 +125,10 @@ body {
   display: inline-block;
 }
 
+.hover-effect-icon:hover {
+  @apply hover:stroke-accent cursor-pointer transition-colors duration-300 ease-out;
+}
+
 @media (max-width: 1348px) {
   .mobile-block-album {
     padding-right: 30px;
