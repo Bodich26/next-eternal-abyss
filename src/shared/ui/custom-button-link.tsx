@@ -11,7 +11,9 @@ export const CustomButtonLink = ({ Icon, text, link, className }: Props) => {
   return (
     <Link
       href={link}
-      className={`px-5 py-3 bg-accent rounded-md cursor-pointer flex items-center justify-between gap-2.5 ${className}`}
+      className={`px-5 py-3 bg-accent rounded-md cursor-pointer flex items-center justify-between gap-2.5 ${className}
+      btn-gradient
+      `}
     >
       {text}
       {Icon && <Icon size={20} />}

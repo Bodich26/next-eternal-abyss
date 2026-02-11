@@ -3,13 +3,19 @@ import { ITour } from "../model/type";
 
 export const TourItem = ({ date, time, country, venue, venueName }: ITour) => {
   return (
-    <div className="flex justify-between flex-col gap-4 main-gradient-90-deg shadow-block p-4 rounded-md">
+    <div
+      className="flex justify-between flex-col gap-4 main-gradient-90-deg shadow-block p-4 rounded-md
+      group
+      transition-all
+      duration-300
+      hover:scale-[1.02]"
+    >
       <div className="flex flex-col items-start gap-2">
         <h4 className="font-bold text-[32px]">{date}</h4>
         <span className="text-[18px]">{time}</span>
       </div>
       <div className="flex flex-col items-end gap-1">
-        <Link href={"/"} className="text-accent">
+        <Link href={"/"} className="text-accent text-link-hover">
           Билеты
         </Link>
         <p className="text-xl">{country}</p>
