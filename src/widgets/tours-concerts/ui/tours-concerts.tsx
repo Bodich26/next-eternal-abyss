@@ -10,7 +10,7 @@ export const ToursConcerts = () => {
         <div className="flex justify-between items-center mb-[39px] flex-wrap gap-2 max-sm:justify-center">
           <Link
             href={"/tour"}
-            className="inline-flex items-center gap-2 text-accent border-accent border-b text-[18px]"
+            className="inline-flex items-center gap-2 text-accent border-accent border-b text-[18px] text-link-hover"
           >
             Посмотреть все туры
             <ArrowRight width={24} height={24} />

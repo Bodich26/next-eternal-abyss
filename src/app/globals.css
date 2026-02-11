@@ -7,6 +7,7 @@
   --whites-100: #ffffff;
   --whites-200: #d4d4d4;
   --accent: #69399d;
+  --accent-hover: #8047bd;
 }
 
 @theme inline {
@@ -16,6 +17,7 @@
   --color-whites-100: var(--whites-100);
   --color-whites-200: var(--whites-200);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
 
   --font-sans: var(--font-geist-sans);
   --font-unifractur: var(--font-unifractur), serif;
@@ -127,6 +129,24 @@ body {
 
 .hover-effect-icon:hover {
   @apply hover:stroke-accent cursor-pointer transition-colors duration-300 ease-out;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, var(--accent), #7c4dff);
+  background-size: 200% 200%;
+  transition:
+    background-position 0.4s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background-position: right center;
+  box-shadow: 0 10px 25px rgba(105, 57, 157, 0.4);
+}
+
+.text-link-hover:hover {
+  @apply hover:text-accent-hover transition-colors duration-300;
 }
 
 @media (max-width: 1348px) {

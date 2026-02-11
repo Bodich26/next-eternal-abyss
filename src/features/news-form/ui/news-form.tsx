@@ -18,7 +18,7 @@ export const NewsForm = () => {
       />
       <button
         type="submit"
-        className="px-5 py-3 bg-accent rounded-md cursor-pointer flex items-center justify-center gap-2.5 w-full"
+        className="btn-gradient px-5 py-3 bg-accent rounded-md cursor-pointer flex items-center justify-center gap-2.5 w-full"
       >
         Подписаться
       </button>
