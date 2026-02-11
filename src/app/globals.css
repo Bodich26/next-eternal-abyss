@@ -148,7 +148,21 @@ body {
 
 @media (max-width: 1210px) {
   .mobile-block-album {
-    padding-right: 15px;
     padding-left: 250px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .mobile-block-album {
+    padding-left: 300px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .mobile-block-album-img {
+    display: none;
+  }
+  .mobile-block-album {
+    padding: 14px;
   }
 }

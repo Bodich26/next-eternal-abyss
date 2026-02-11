@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export const OurMerch = () => {
   return (
-    <section className="mt-[120px] pt-[33px] pb-[78px] main-gradient-90-deg relative">
+    <section className="mt-[120px] pt-[33px] pb-[78px] main-gradient-90-deg relative max-[425]:mt-[80px]! max-[425]:pb-[30px]!">
       <Container>
         <span className="max-md:hidden absolute w-full left-0 right-0 h-[1px] bg-whites-100/15 rounded-md top-[134px]" />
         <span className="max-md:hidden absolute w-full left-0 right-0 h-[1px] bg-whites-100/15 rounded-md bottom-[182px]" />

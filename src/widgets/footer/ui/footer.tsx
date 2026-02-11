@@ -5,7 +5,7 @@ import { Container } from "@/shared";
 export const Footer = () => {
   return (
     <footer className="w-full py-3.5 bg-blacks-300">
-      <Container className="flex justify-between items-center">
+      <Container className="flex justify-between items-center max-sm:flex-wrap max-sm:flex-col-reverse gap-3">
         <p className="text-center">&copy; Copyright Bodich 2026</p>
         <div className="flex items-center gap-3">
           <span>Follow us:</span>

@@ -3,3 +3,4 @@ export { headerLinkLeft, headerLinkRight } from "./constants/header-links";
 export { Container } from "./ui/container";
 export { CustomButtonLink } from "./ui/custom-button-link";
 export { Titles } from "./ui/titles";
+export { Paragraph } from "./ui/paragraph";
