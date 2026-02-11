@@ -13,8 +13,7 @@
       "Crown of Ruin",
       "Eternal Collapse"
     ],
-    "image": "https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=1200&q=80",
-    "coverColor": "#0a0000"
+    "image": "/albums/shadow.jpg"
   },
   {
     "id": "2",
@@ -22,8 +21,7 @@
     "releaseYear": 2023,
     "shortDescription": "EP с самыми тяжёлыми breakdowns в истории группы",
     "tracklist": ["Dominion", "Buried Alive", "Flesh Harvest", "No Salvation"],
-    "image": "https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80",
-    "coverColor": "#1a0000"
+    "image": "/albums/grave.jpg"
   },
   {
     "id": "3",
@@ -37,8 +35,7 @@
       "Ashen Prayers",
       "Final Sermon"
     ],
-    "image": "https://images.unsplash.com/photo-1504197837121-8d3c574a5d7e?w=1200&q=80",
-    "coverColor": "#000814"
+    "image": "/albums/necrotic.jpg"
   },
   {
     "id": "4",
@@ -46,8 +43,7 @@
     "releaseYear": 2022,
     "shortDescription": "Демо, с которого всё началось",
     "tracklist": ["Carrion Birth", "Rotting Embrace", "Womb of Decay"],
-    "image": "https://images.unsplash.com/photo-1547891654-e66ed7eb0d7b?w=1200&q=80",
-    "coverColor": "#0f0005"
+    "image": "/albums/womb.jpg"
   },
   {
     "id": "5",
@@ -59,8 +55,7 @@
       "Live: Bleed the Sky",
       "Live: Crown of Ruin"
     ],
-    "image": "https://images.unsplash.com/photo-1506157786151-b4891330f8a8?w=1200&q=80",
-    "coverColor": "#12000a"
+    "image": "/albums/abyssal.jpg"
   },
   {
     "id": "6",
@@ -68,8 +63,7 @@
     "releaseYear": 2025,
     "shortDescription": "Сингл, взорвавший TikTok в metal-сообществе",
     "tracklist": ["Crown of Maggots", "Maggot Throne"],
-    "image": "https://images.unsplash.com/photo-1557683311-973673baf050?w=1200&q=80",
-    "coverColor": "#080001"
+    "image": "/albums/crown.jpg"
   },
   {
     "id": "7",
@@ -77,7 +71,6 @@
     "releaseYear": 2024,
     "shortDescription": "Переиздание с бонус-треками и новой обложкой",
     "tracklist": ["Collapse", "Eternal", "Bonus: Silent Abyss"],
-    "image": "https://images.unsplash.com/photo-1544194215-99a969a0a9d9?w=1200&q=80",
-    "coverColor": "#000000"
+    "image": "/albums/collapse.jpg"
   }
 ]

@@ -35,10 +35,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${geistSans.variable} ${unifraktur.variable} antialiased`}
+        className={`${geistSans.variable} ${unifraktur.variable} antialiased min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="pt-[68px]">{children}</main>
+        <main className="pt-[68px] flex-1">{children}</main>
         <Footer />
       </body>
     </html>
