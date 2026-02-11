@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export const ToursConcerts = () => {
   return (
-    <section className="mt-[120px]">
+    <section className="mt-[120px] max-[425]:mt-[80px]!">
       <Container>
-        <div className="flex justify-between items-center mb-[39px] flex-wrap gap-2">
+        <div className="flex justify-between items-center mb-[39px] flex-wrap gap-2 max-sm:justify-center">
           <Link
             href={"/tour"}
             className="inline-flex items-center gap-2 text-accent border-accent border-b text-[18px]"

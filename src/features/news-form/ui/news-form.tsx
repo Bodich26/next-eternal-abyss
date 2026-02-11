@@ -2,7 +2,7 @@ export const NewsForm = () => {
   return (
     <form
       action=""
-      className="w-[504px] flex flex-col justify-center items-center gap-6"
+      className="w-[504px] flex flex-col justify-center items-center gap-6 max-sm:w-full"
     >
       <input
         type="email"
