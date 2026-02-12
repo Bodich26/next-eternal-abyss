@@ -24,9 +24,10 @@ export const ToursConcerts = () => {
               id={String(index)}
               date={"15 Марта"}
               time={"20:00"}
-              country={"Берлин, Германия"}
+              location={"Берлин, Германия"}
               venue={"Клуб"}
               venueName={"Black Void"}
+              ticketsUrl={"/"}
             />
           ))}
         </div>
