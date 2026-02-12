@@ -3,6 +3,9 @@ import { IAlbum } from "../model/type";
 
 export const getAlbums = async (): Promise<IAlbum[]> => {
   const URL = `${process.env.NEXT_PUBLIC_API_URL}/${process.env.ALBUMS_API_URL}`;
+  if (!URL) {
+    throw new Error("URL для получения альбомов не задан");
+  }
 
   const res = await fetch(URL, {
     cache: "force-cache",

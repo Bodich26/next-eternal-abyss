@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "date": "15 Марта 2026",
+    "time": "20:00",
+    "ticketsUrl": "https://example.com/tickets/berlin",
+    "location": "Берлин, Германия",
+    "venue": "Клуб",
+    "venueName": "Black Void"
+  },
+  {
+    "id": "2",
+    "date": "22 Марта 2026",
+    "time": "19:30",
+    "ticketsUrl": "https://example.com/tickets/prague",
+    "location": "Прага, Чехия",
+    "venue": "Концертный зал",
+    "venueName": "Iron Pulse Hall"
+  },
+  {
+    "id": "3",
+    "date": "5 Апреля 2026",
+    "time": "21:00",
+    "ticketsUrl": "https://example.com/tickets/moscow",
+    "location": "Москва, Россия",
+    "venue": "Арена",
+    "venueName": "Abyss Arena"
+  },
+  {
+    "id": "4",
+    "date": "12 Апреля 2026",
+    "time": "20:30",
+    "ticketsUrl": "https://example.com/tickets/newyork",
+    "location": "Будапешт, Венгрия",
+    "venue": "Бар-Клуб",
+    "venueName": "Dark Anchor"
+  },
+  {
+    "id": "5",
+    "date": "20 Апреля 2026",
+    "time": "19:00",
+    "ticketsUrl": "https://example.com/tickets/london",
+    "location": "Вена, Австрия",
+    "venue": "Клуб",
+    "venueName": "Obsidian Hall"
+  },
+  {
+    "id": "6",
+    "date": "3 Мая 2026",
+    "time": "22:00",
+    "ticketsUrl": "https://example.com/tickets/paris",
+    "location": "Париж, Франция",
+    "venue": "Клуб",
+    "venueName": "Necro Lounge"
+  },
+  {
+    "id": "7",
+    "date": "10 Мая 2026",
+    "time": "20:00",
+    "ticketsUrl": "https://example.com/tickets/tokyo",
+    "location": "Милан, Италия",
+    "venue": "Клуб",
+    "venueName": "Inferno District"
+  },
+  {
+    "id": "8",
+    "date": "14 Мая 2026",
+    "time": "19:00",
+    "ticketsUrl": "https://example.com/tickets/tokyo",
+    "location": "Токио, Япония",
+    "venue": "Клуб",
+    "venueName": "Inferno District"
+  },
+  {
+    "id": "9",
+    "date": "17 Мая 2026",
+    "time": "20:00",
+    "ticketsUrl": "https://example.com/tickets/tokyo",
+    "location": "Сеул, Южная Корея",
+    "venue": "Клуб-Бар",
+    "venueName": "Inferno District"
+  },
+  {
+    "id": "10",
+    "date": "22 Мая 2026",
+    "time": "21:00",
+    "ticketsUrl": "https://example.com/tickets/tokyo",
+    "location": "Швейцария, Цюрих",
+    "venue": "Клуб-Бар",
+    "venueName": "Pab of Shadows"
+  }
+]

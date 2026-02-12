@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { ITour } from "../model/type";
 
-export const TourItem = ({ date, time, country, venue, venueName }: ITour) => {
+export const TourItem = ({
+  date,
+  time,
+  location,
+  venue,
+  venueName,
+  ticketsUrl,
+}: ITour) => {
   return (
     <div
       className="flex justify-between flex-col gap-4 main-gradient-90-deg shadow-block p-4 rounded-md
@@ -15,10 +22,10 @@ export const TourItem = ({ date, time, country, venue, venueName }: ITour) => {
         <span className="text-[18px]">{time}</span>
       </div>
       <div className="flex flex-col items-end gap-1">
-        <Link href={"/"} className="text-accent text-link-hover">
+        <Link href={ticketsUrl} className="text-accent text-link-hover">
           Билеты
         </Link>
-        <p className="text-xl">{country}</p>
+        <p className="text-xl">{location}</p>
         <p className="text-xl">
           {venue}: <b className="font-bold">{`“${venueName}”`}</b>
         </p>
