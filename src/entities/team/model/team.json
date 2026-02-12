@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Banan (Богдан)",
+    "direction": "Guitar",
+    "description": "Режет воздух риффами и ломает строй соседям.",
+    "image": "https://images.unsplash.com/photo-1484876065684-b683cf17d276?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": "2",
+    "name": "Nivan (Иван)",
+    "direction": "Vocals",
+    "description": "Кричит так, будто это последний концерт человечества.",
+    "image": "https://images.unsplash.com/photo-1723294915133-3bc532052589?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": "3",
+    "name": "Mishok (Михаил)",
+    "direction": "Guitar / Composition",
+    "description": "Сначала пишет — потом думает.",
+    "image": "https://images.unsplash.com/photo-1619961602105-16fa2a5465c2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]
