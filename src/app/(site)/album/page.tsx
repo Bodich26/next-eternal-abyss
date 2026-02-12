@@ -8,9 +8,9 @@ export default async function Album() {
   return (
     <>
       <HeroTitle title="Eternal Abyss" text="Мы превращаем эмоции в звук." />
-      <section className="mt-[100px] max-md:mt-[30px] max-[425]:mt-0!">
+      <section className="mt-[100px] max-md:mt-[30px] mb-[100px] max-md:mb-[30px]">
         <Container>
-          <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:overflow-y-auto max-sm:h-[80vh]">
+          <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
             {albumsData
               .sort((a, b) => b.releaseYear - a.releaseYear)
               .map((album) => (
