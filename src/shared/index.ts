@@ -4,3 +4,5 @@ export { Container } from "./ui/container";
 export { CustomButtonLink } from "./ui/custom-button-link";
 export { Titles } from "./ui/titles";
 export { Paragraph } from "./ui/paragraph";
+export { otherLinks } from "./constants/other-links";
+export { eventsItem } from "./constants/events-item";
