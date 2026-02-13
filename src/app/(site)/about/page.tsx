@@ -13,7 +13,7 @@ export default function About() {
       />
       <Container>
         <section className="mt-[100px] max-md:mt-[30px] max-md:text-center">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center max-md:gap-8">
             <div
               className="relative w-full h-80 overflow-hidden rounded-md shadow-block
               transition-all duration-300
@@ -46,10 +46,10 @@ export default function About() {
           </div>
         </section>
       </Container>
-      <section className="mt-[100px] max-md:mt-[30px] main-gradient-90-deg max-md:text-center">
+      <section className="mt-[100px] max-md:mt-[64px] main-gradient-90-deg max-md:text-center">
         <Container>
           <Titles as="h3" text="История" />
-          <div className="py-9 flex gap-8 max-md:flex-col">
+          <div className="py-9 flex gap-8 max-md:flex-col max-md:pt-4">
             <div className="gap-4 flex flex-col">
               <Paragraph
                 text="Группа была основана в 2022 году как эксперимент между друзьями,
