@@ -2,6 +2,7 @@ import { getTours, TourItem } from "@/entities/tours";
 import { Container, Titles } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { PUBLIC_ROUTES } from "@/../routes";
 
 export const ToursConcerts = async () => {
   const toursData = await getTours();
@@ -10,7 +11,7 @@ export const ToursConcerts = async () => {
       <Container>
         <div className="flex justify-between items-center mb-[39px] flex-wrap gap-2 max-sm:justify-center">
           <Link
-            href={"/tour"}
+            href={PUBLIC_ROUTES.TOURS}
             className="inline-flex items-center gap-2 text-accent border-accent border-b text-[18px] text-link-hover"
           >
             Посмотреть все туры

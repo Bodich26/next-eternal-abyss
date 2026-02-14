@@ -1,5 +1,6 @@
 import { Container, CustomButtonLink, Paragraph, Titles } from "@/shared";
 import Image from "next/image";
+import { PUBLIC_ROUTES } from "@/../routes";
 
 export const IdeaGroup = () => {
   return (
@@ -23,7 +24,7 @@ export const IdeaGroup = () => {
             />
             <CustomButtonLink
               text="Узнать Больше"
-              link="/about"
+              link={PUBLIC_ROUTES.ABOUT}
               className="w-[190px] mt-[58px] justify-center max-lg:mr-auto max-lg:ml-auto"
             />
           </div>

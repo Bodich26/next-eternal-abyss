@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import { IMerch } from "../model/type";
+import { API_ROUTES } from "@/../routes";
 
 export const getMerch = async (): Promise<IMerch[]> => {
-  const URL = `${process.env.NEXT_PUBLIC_API_URL}/${process.env.MERCH_API_URL}`;
+  const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.MERCH}`;
   if (!URL) {
     throw new Error("URL для получения мерча не задан");
   }
