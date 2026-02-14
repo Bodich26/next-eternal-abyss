@@ -11,8 +11,8 @@ export default function About() {
         title="Eternal Abyss"
         text="Талантами не рождаются, ими становятся."
       />
-      <Container>
-        <section className="mt-[100px] max-md:mt-[30px] max-md:text-center">
+      <section className="mt-[100px] max-md:mt-[30px] max-md:text-center">
+        <Container>
           <div className="grid md:grid-cols-2 gap-8 items-center max-md:gap-8">
             <div
               className="relative w-full h-80 overflow-hidden rounded-md shadow-block
@@ -44,12 +44,12 @@ export default function About() {
               />
             </div>
           </div>
-        </section>
-      </Container>
+        </Container>
+      </section>
       <section className="mt-[100px] max-md:mt-[64px] main-gradient-90-deg max-md:text-center">
         <Container>
           <Titles as="h3" text="История" />
-          <div className="py-9 flex gap-8 max-md:flex-col max-md:pt-4">
+          <div className="py-4 flex gap-8 max-md:flex-col max-md:pt-4">
             <div className="gap-4 flex flex-col">
               <Paragraph
                 text="Группа была основана в 2022 году как эксперимент между друзьями,
@@ -85,7 +85,7 @@ export default function About() {
           </div>
         </Container>
       </section>
-      <section className="mt-[100px] max-md:mt-[30px] mb-[100px] max-md:mb-[30px]">
+      <section className="mt-[100px] max-md:mt-[30px] mb-9">
         <Container>
           <Titles as="h3" text="Команда" className="text-center mb-4" />
           <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">

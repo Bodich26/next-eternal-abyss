@@ -44,7 +44,7 @@ export default function Contacts() {
           </div>
         </Container>
       </section>
-      <section className="py-9 max-md:pt-4 mt-[100px] max-md:mt-[64px] max-md:text-center">
+      <section className="mb-9 max-md:pt-4 mt-[100px] max-md:mt-[64px] max-md:text-center">
         <Container>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-block">
@@ -56,7 +56,6 @@ export default function Contacts() {
               />
               <div className="absolute inset-0 bg-black/40" />
             </div>
-
             <div className="space-y-4">
               <Titles as="h3" text="Мы открыты к сотрудничеству" />
               <Paragraph

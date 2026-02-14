@@ -1,9 +1,10 @@
-import { TourItem } from "@/entities/tours";
+import { getTours, TourItem } from "@/entities/tours";
 import { Container, Titles } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export const ToursConcerts = () => {
+export const ToursConcerts = async () => {
+  const toursData = await getTours();
   return (
     <section className="mt-[120px] max-[425]:mt-[80px]!">
       <Container>
@@ -18,17 +19,8 @@ export const ToursConcerts = () => {
           <Titles text={"ТУРЫ И КОНЦЕРТЫ"} as={"h3"} />
         </div>
         <div className=" grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:overflow-y-auto max-sm:h-[80vh]">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <TourItem
-              key={index}
-              id={String(index)}
-              date={"15 Марта"}
-              time={"20:00"}
-              location={"Берлин, Германия"}
-              venue={"Клуб"}
-              venueName={"Black Void"}
-              ticketsUrl={"/"}
-            />
+          {toursData.slice(0, 6).map((tours) => (
+            <TourItem key={tours.id} item={tours} />
           ))}
         </div>
       </Container>
