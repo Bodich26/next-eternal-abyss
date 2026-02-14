@@ -1,39 +1,39 @@
 [
   {
     "id": "1",
-    "title": "Shadows of the Void Hoodie",
-    "price": 59.99,
+    "title": "Футболка Eternal Abyss",
+    "price": 22.99,
     "currency": "USD",
-    "shortDescription": "Чёрное худи с полной обложкой альбома",
+    "shortDescription": "Чёрная футболка с изображением обложки альбома",
     "sizes": ["S", "M", "L", "XL", "2XL"],
-    "image": "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80"
+    "image": "/merch/1.jpg"
   },
   {
     "id": "2",
-    "title": "Eternal Abyss Logo T-Shirt",
-    "price": 29.99,
+    "title": "Чёрная худи Voidborn",
+    "price": 32.99,
     "currency": "USD",
-    "shortDescription": "Классическая чёрная футболка с готическим лого",
+    "shortDescription": "Чёрная толстовка с капюшоном и логотипом альбома на спине",
     "sizes": ["S", "M", "L", "XL"],
-    "image": "https://images.unsplash.com/photo-1557683311-973673baf050?w=800&q=80"
+    "image": "/merch/2.jpg"
   },
   {
     "id": "3",
-    "title": "Abyssal Descent Tour Poster",
-    "price": 14.99,
+    "title": "Nike кроссовки",
+    "price": 25.99,
     "currency": "USD",
-    "shortDescription": "A2-постер с датами тура и черепом",
+    "shortDescription": "Белые кроссовки с принтом в виде короны из личинок",
     "sizes": ["A2"],
-    "image": "https://images.unsplash.com/photo-1506157786151-b4891330f8a8?w=800&q=80"
+    "image": "/merch/3.jpg"
   },
   {
     "id": "4",
-    "title": "Crown of Maggots Beanie",
+    "title": "Лук Shadow of the Void",
     "price": 24.99,
     "currency": "USD",
-    "shortDescription": "Чёрная шапка с вышитым названием сингла",
+    "shortDescription": "Черный лук с принтом в виде силуэта человека, погруженного в тьму",
     "sizes": ["One Size"],
-    "image": "https://images.unsplash.com/photo-1504197837121-8d3c574a5d7e?w=800&q=80"
+    "image": "/merch/4.jpg"
   },
   {
     "id": "5",
@@ -42,7 +42,7 @@
     "currency": "USD",
     "shortDescription": "Лимитированный чёрный винил + цифровой код",
     "sizes": [],
-    "image": "https://images.unsplash.com/photo-1547891654-e66ed7eb0d7b?w=800&q=80"
+    "image": "/merch/5.jpg"
   },
   {
     "id": "6",
@@ -51,15 +51,15 @@
     "currency": "USD",
     "shortDescription": "Набор из 5 нашивок с треками альбома",
     "sizes": [],
-    "image": "https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&q=80"
+    "image": "/merch/6.jpg"
   },
   {
     "id": "7",
-    "title": "Eternal Abyss Enamel Pin",
-    "price": 9.99,
+    "title": "PC Eternal Abyss",
+    "price": 1200,
     "currency": "USD",
-    "shortDescription": "Металлический пин с лого группы",
+    "shortDescription": "Комьютер с эксклюзивным дизайном в стиле альбома Eternal Abyss",
     "sizes": ["One Size"],
-    "image": "https://images.unsplash.com/photo-1544194215-99a969a0a9d9?w=800&q=80"
+    "image": "/merch/7.jpg"
   }
 ]

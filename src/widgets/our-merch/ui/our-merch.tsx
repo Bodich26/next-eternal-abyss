@@ -1,8 +1,9 @@
-import { MerchImageItem } from "@/entities/merch";
+import { getMerch, MerchImageItem } from "@/entities/merch";
 import { Container, CustomButtonLink, Titles } from "@/shared";
 import { ArrowRight } from "lucide-react";
 
-export const OurMerch = () => {
+export const OurMerch = async () => {
+  const merch = await getMerch();
   return (
     <section className="mt-[120px] pt-[33px] pb-[78px] main-gradient-90-deg relative max-[425]:mt-[80px]! max-[425]:pb-[30px]!">
       <Container>
@@ -16,8 +17,8 @@ export const OurMerch = () => {
           <Titles text={"Наш Мерч"} as={"h3"} />
         </div>
         <div className=" grid grid-cols-4 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:overflow-y-auto max-sm:h-[80vh]">
-          {Array.from({ length: 4 }).map((_, index) => (
-            <MerchImageItem key={index} image={"/merch/1.jpg"} />
+          {merch.slice(0, 4).map((item) => (
+            <MerchImageItem key={item.id} image={item.image} />
           ))}
         </div>
         <CustomButtonLink
