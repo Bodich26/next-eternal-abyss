@@ -7,7 +7,10 @@ export default async function Albums() {
 
   return (
     <>
-      <HeroTitle title="Eternal Abyss" text="Мы превращаем эмоции в звук." />
+      <HeroTitle
+        title="Eternal Abyss"
+        text="Админка для редактирование Альбомами."
+      />
       <section className="mt-[100px] max-md:mt-[30px] mb-9">
         <Container>
           <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
