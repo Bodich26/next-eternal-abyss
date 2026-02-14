@@ -9,7 +9,7 @@ export default async function Tours() {
     <>
       <HeroTitle
         title="Eternal Abyss"
-        text="Приходите на наши концерты, и слушайте нашу музыку вживую!"
+        text="Админка для редактирование Туров."
       />
       <section className="mt-[100px] max-md:mt-[30px] mb-9">
         <Container>

@@ -8,7 +8,7 @@ export default async function Merch() {
     <>
       <HeroTitle
         title="Eternal Abyss"
-        text="Комфорт и характер в каждой детали."
+        text="Админка для редактирование Мерча."
       />
       <section className="mt-[100px] max-md:mt-[30px] mb-9">
         <Container>
