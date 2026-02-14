@@ -1,6 +1,7 @@
 import { Container, CustomButtonLink, Paragraph } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { PUBLIC_ROUTES } from "@/../routes";
 
 export const CurrentAlbum = () => {
   return (
@@ -26,7 +27,7 @@ export const CurrentAlbum = () => {
             <CustomButtonLink
               text={"Все Альбомы"}
               Icon={ArrowRight}
-              link="/album"
+              link={PUBLIC_ROUTES.ALBUMS}
               className="w-[190px] justify-center max-sm:m-auto"
             />
           </div>

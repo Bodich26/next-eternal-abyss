@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import { ITour } from "../model/type";
+import { API_ROUTES } from "@/../routes";
 
 export const getTours = async (): Promise<ITour[]> => {
-  const URL = `${process.env.NEXT_PUBLIC_API_URL}/${process.env.TOURS_API_URL}`;
+  const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.TOURS}`;
   if (!URL) {
     throw new Error("URL для получения туров не задан");
   }

@@ -3,7 +3,7 @@ import { HeroTitle } from "@/widgets/hero-title";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Contacts() {
+export default function Contact() {
   return (
     <>
       <HeroTitle title="Eternal Abyss" text="Пишите, звоните, мы на связи." />

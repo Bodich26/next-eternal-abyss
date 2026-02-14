@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import { IAlbum } from "../model/type";
+import { API_ROUTES } from "@/../routes";
 
 export const getAlbums = async (): Promise<IAlbum[]> => {
-  const URL = `${process.env.NEXT_PUBLIC_API_URL}/${process.env.ALBUMS_API_URL}`;
+  const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.ALBUMS}`;
+
   if (!URL) {
     throw new Error("URL для получения альбомов не задан");
   }

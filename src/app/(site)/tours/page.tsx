@@ -2,7 +2,7 @@ import { getTours, TourItem } from "@/entities/tours";
 import { Container } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
 
-export default async function Tour() {
+export default async function Tours() {
   const toursData = await getTours();
 
   return (

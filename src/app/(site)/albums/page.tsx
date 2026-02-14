@@ -2,7 +2,7 @@ import { AlbumItem, getAlbums } from "@/entities/albums";
 import { Container } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
 
-export default async function Album() {
+export default async function Albums() {
   const albumsData = await getAlbums();
 
   return (

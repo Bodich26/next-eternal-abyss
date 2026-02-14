@@ -6,3 +6,4 @@ export { Titles } from "./ui/titles";
 export { Paragraph } from "./ui/paragraph";
 export { otherLinks } from "./constants/other-links";
 export { eventsItem } from "./constants/events-item";
+export { adminNav } from "./constants/admin-nav";
