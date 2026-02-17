@@ -23,7 +23,7 @@
     "price": 25.99,
     "currency": "USD",
     "shortDescription": "Белые кроссовки с принтом в виде короны из личинок",
-    "sizes": ["A2"],
+    "sizes": ["42", "43", "44"],
     "image": "/merch/3.jpg"
   },
   {
