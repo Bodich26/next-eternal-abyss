@@ -1,20 +1,27 @@
 import { notFound } from "next/navigation";
-import { IMerch } from "../model/type";
+import { IMerch, MerchCached } from "../model/type";
 import { API_ROUTES } from "@/../routes";
 
-export const getMerch = async (): Promise<IMerch[]> => {
+export const getMerch = async ({
+  isCached,
+}: MerchCached): Promise<IMerch[]> => {
   const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.MERCH}`;
+
   if (!URL) {
     throw new Error("URL для получения мерча не задан");
   }
 
-  const res = await fetch(URL, {
-    cache: "force-cache",
-    next: {
-      revalidate: 60,
-      tags: ["merch"],
-    },
-  });
+  const fetchOptions = isCached
+    ? {
+        cache: "force-cache" as const,
+        next: {
+          revalidate: 60,
+          tags: ["merch"],
+        },
+      }
+    : { cache: "no-store" as const };
+
+  const res = await fetch(URL, fetchOptions);
 
   if (res.status === 404) {
     notFound();

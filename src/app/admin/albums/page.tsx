@@ -3,13 +3,13 @@ import { Container } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
 
 export default async function Albums() {
-  const albumsData = await getAlbums();
+  const albumsData = await getAlbums({ isCached: false });
 
   return (
     <>
       <HeroTitle
         title="Eternal Abyss"
-        text="Админка для редактирование Альбомами."
+        text="Админка для управления Альбомами."
       />
       <section className="mt-[100px] max-md:mt-[30px] mb-9">
         <Container>

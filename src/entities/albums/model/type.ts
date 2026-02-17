@@ -6,3 +6,7 @@ export interface IAlbum {
   tracklist: string[];
   image: string;
 }
+
+export type AlbumCached = {
+  isCached?: boolean;
+};

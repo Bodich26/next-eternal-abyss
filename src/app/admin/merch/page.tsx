@@ -3,13 +3,10 @@ import { Container } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
 
 export default async function Merch() {
-  const merchData = await getMerch();
+  const merchData = await getMerch({ isCached: false });
   return (
     <>
-      <HeroTitle
-        title="Eternal Abyss"
-        text="Админка для редактирование Мерча."
-      />
+      <HeroTitle title="Eternal Abyss" text="Админка для управления Мерчем." />
       <section className="mt-[100px] max-md:mt-[30px] mb-9">
         <Container>
           <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 ">

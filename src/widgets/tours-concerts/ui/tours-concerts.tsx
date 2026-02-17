@@ -5,7 +5,7 @@ import Link from "next/link";
 import { PUBLIC_ROUTES } from "@/../routes";
 
 export const ToursConcerts = async () => {
-  const toursData = await getTours();
+  const toursData = await getTours({ isCached: true });
   return (
     <section className="mt-[120px] max-[425]:mt-[80px]!">
       <Container>

@@ -1,21 +1,27 @@
 import { notFound } from "next/navigation";
-import { IAlbum } from "../model/type";
+import { AlbumCached, IAlbum } from "../model/type";
 import { API_ROUTES } from "@/../routes";
 
-export const getAlbums = async (): Promise<IAlbum[]> => {
+export const getAlbums = async ({
+  isCached,
+}: AlbumCached): Promise<IAlbum[]> => {
   const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.ALBUMS}`;
 
   if (!URL) {
     throw new Error("URL для получения альбомов не задан");
   }
 
-  const res = await fetch(URL, {
-    cache: "force-cache",
-    next: {
-      revalidate: 60,
-      tags: ["albums"],
-    },
-  });
+  const fetchOptions = isCached
+    ? {
+        cache: "force-cache" as const,
+        next: {
+          revalidate: 60,
+          tags: ["albums"],
+        },
+      }
+    : { cache: "no-store" as const };
+
+  const res = await fetch(URL, fetchOptions);
 
   if (res.status === 404) {
     notFound();

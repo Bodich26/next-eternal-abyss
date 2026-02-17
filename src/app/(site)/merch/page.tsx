@@ -3,7 +3,7 @@ import { Container } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
 
 export default async function Merch() {
-  const merchData = await getMerch();
+  const merchData = await getMerch({ isCached: true });
   return (
     <>
       <HeroTitle

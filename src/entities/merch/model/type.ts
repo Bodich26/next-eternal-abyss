@@ -9,3 +9,7 @@ export interface IMerch {
 }
 
 export type TSize = "S" | "M" | "L" | "XL" | "2XL";
+
+export type MerchCached = {
+  isCached?: boolean;
+};

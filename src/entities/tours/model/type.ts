@@ -7,3 +7,7 @@ export interface ITour {
   venue: string;
   venueName: string;
 }
+
+export type TourCached = {
+  isCached?: boolean;
+};

@@ -3,7 +3,7 @@ import { Container } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
 
 export default async function Albums() {
-  const albumsData = await getAlbums();
+  const albumsData = await getAlbums({ isCached: true });
 
   return (
     <>
