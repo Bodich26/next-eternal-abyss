@@ -1,22 +1,32 @@
 import Image from "next/image";
 import { IAlbum } from "../model/type";
+import { EditAdminButton } from "@/features/edit-admin-button";
+import { PUBLIC_ROUTES } from "../../../../routes";
 
 type Props = {
   album: IAlbum;
+  isAdmin?: boolean;
 };
 
-export const AlbumItem = ({ album }: Props) => {
+export const AlbumItem = ({ album, isAdmin }: Props) => {
   return (
     <div
       className="
       group relative overflow-hidden
-      rounded-xl
+      rounded-md
       main-gradient-90-deg
       shadow-block
       transition-all duration-300
       hover:scale-[1.02]
     "
     >
+      {isAdmin && (
+        <EditAdminButton
+          url={`${PUBLIC_ROUTES.ADMIN}/${PUBLIC_ROUTES.ALBUMS}`}
+          idUrl={album.id}
+        />
+      )}
+
       {/* Cover */}
       <div className="relative w-full h-[380px] overflow-hidden">
         <Image
