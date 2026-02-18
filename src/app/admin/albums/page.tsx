@@ -17,7 +17,7 @@ export default async function Albums() {
             {albumsData
               .sort((a, b) => b.releaseYear - a.releaseYear)
               .map((album) => (
-                <AlbumItem key={album.id} album={album} />
+                <AlbumItem key={album.id} album={album} isAdmin={true} />
               ))}
           </div>
         </Container>
