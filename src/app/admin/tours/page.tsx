@@ -12,7 +12,7 @@ export default async function Tours() {
         <Container>
           <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 ">
             {toursData.map((tour) => (
-              <TourItem key={tour.id} item={tour} />
+              <TourItem key={tour.id} tour={tour} isAdmin={true} />
             ))}
           </div>
         </Container>

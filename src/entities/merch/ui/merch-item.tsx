@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { IMerch } from "../model/type";
+import { EditAdminButton } from "@/features/edit-admin-button";
+import { PUBLIC_ROUTES } from "../../../../routes";
 
 type Props = {
-  item: IMerch;
+  merch: IMerch;
+  isAdmin?: boolean;
 };
 
-export const MerchItem = ({ item }: Props) => {
+export const MerchItem = ({ merch, isAdmin }: Props) => {
   return (
     <div
       className="
@@ -18,10 +21,16 @@ export const MerchItem = ({ item }: Props) => {
         flex flex-col justify-between
       "
     >
+      {isAdmin && (
+        <EditAdminButton
+          url={`${PUBLIC_ROUTES.ADMIN}/${PUBLIC_ROUTES.MERCH}`}
+          idUrl={merch.id}
+        />
+      )}
       <div className="relative w-full h-[360px] justify-start items-start overflow-hidden">
         <Image
-          src={item.image}
-          alt={item.title}
+          src={merch.image}
+          alt={merch.title}
           fill
           className="
             object-cover object-center
@@ -37,19 +46,19 @@ export const MerchItem = ({ item }: Props) => {
         <div className="flex flex-col flex-1 gap-4">
           <div className="flex flex-col flex-1 gap-4">
             <div className="flex justify-between items-center">
-              <h3 className="text-xl font-bold tracking-wide">{item.title}</h3>
+              <h3 className="text-xl font-bold tracking-wide">{merch.title}</h3>
               <span className="text-accent font-semibold">
-                {item.price} {item.currency}
+                {merch.price} {merch.currency}
               </span>
             </div>
             <p className="text-whites-100/70 text-sm leading-relaxed">
-              {item.shortDescription}
+              {merch.shortDescription}
             </p>
           </div>
           <div className="min-h-[48px]">
-            {item.sizes && item.sizes.length > 0 ? (
+            {merch.sizes && merch.sizes.length > 0 ? (
               <div className="flex flex-wrap gap-2">
-                {item.sizes.map((size) => (
+                {merch.sizes.map((size) => (
                   <span
                     key={size}
                     className="

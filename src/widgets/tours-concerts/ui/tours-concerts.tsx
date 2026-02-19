@@ -21,7 +21,7 @@ export const ToursConcerts = async () => {
         </div>
         <div className=" grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:overflow-y-auto max-sm:h-[80vh]">
           {toursData.slice(0, 6).map((tours) => (
-            <TourItem key={tours.id} item={tours} />
+            <TourItem key={tours.id} tour={tours} />
           ))}
         </div>
       </Container>
