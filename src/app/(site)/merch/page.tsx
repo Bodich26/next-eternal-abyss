@@ -14,7 +14,7 @@ export default async function Merch() {
         <Container>
           <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 ">
             {merchData.map((merch) => (
-              <MerchItem key={merch.id} item={merch} />
+              <MerchItem key={merch.id} merch={merch} />
             ))}
           </div>
         </Container>

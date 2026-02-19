@@ -1,5 +1,4 @@
 import { CustomButtonLink } from "@/shared";
-import Link from "next/link";
 
 type Props = {
   url: string;
@@ -7,6 +6,7 @@ type Props = {
 };
 
 export const EditAdminButton = ({ url, idUrl }: Props) => {
+  const URL_REDIRECT = `${url}/${idUrl}`;
   return (
     <div
       className="
@@ -15,11 +15,11 @@ export const EditAdminButton = ({ url, idUrl }: Props) => {
       bg-whites-200/30
       opacity-0
       transition-opacity duration-300
-      group-hover:opacity-100
+      group-hover:opacity-100 rounded-md
       z-10
     "
     >
-      <CustomButtonLink text={"Изменить"} link={`${url}${idUrl}`} />
+      <CustomButtonLink text={"Изменить"} link={URL_REDIRECT} />
     </div>
   );
 };

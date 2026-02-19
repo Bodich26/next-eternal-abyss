@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { IAlbum } from "../model/type";
 import { EditAdminButton } from "@/features/edit-admin-button";
-import { PUBLIC_ROUTES } from "../../../../routes";
+import { PUBLIC_ROUTES } from "@/../routes";
 
 type Props = {
   album: IAlbum;

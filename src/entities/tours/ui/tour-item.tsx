@@ -1,31 +1,47 @@
 import Link from "next/link";
 import { ITour } from "../model/type";
+import { EditAdminButton } from "@/features/edit-admin-button";
+import { PUBLIC_ROUTES } from "@/../routes";
 
 type Props = {
-  item: ITour;
+  tour: ITour;
+  isAdmin?: boolean;
 };
 
-export const TourItem = ({ item }: Props) => {
+export const TourItem = ({ tour, isAdmin }: Props) => {
   return (
     <div
-      className="flex justify-between flex-col gap-4 main-gradient-90-deg shadow-block p-4 rounded-md
-      group
-      transition-all
-      duration-300
+      className="
+      group relative overflow-hidden
+      rounded-md
+      main-gradient-90-deg
+      shadow-block
+      transition-all duration-300
       hover:scale-[1.02]"
     >
-      <div className="flex flex-col items-start gap-2">
-        <h4 className="font-bold text-[32px]">{item.date}</h4>
-        <span className="text-[18px]">{item.time}</span>
-      </div>
-      <div className="flex flex-col items-end gap-1">
-        <Link href={item.ticketsUrl} className="text-accent text-link-hover">
-          Билеты
-        </Link>
-        <p className="text-xl">{item.location}</p>
-        <p className="text-xl">
-          {item.venue}: <b className="font-bold">{`“${item.venueName}”`}</b>
-        </p>
+      {isAdmin && (
+        <EditAdminButton
+          url={`${PUBLIC_ROUTES.ADMIN}/${PUBLIC_ROUTES.TOURS}`}
+          idUrl={tour.id}
+        />
+      )}
+      <div
+        className="flex justify-between flex-col gap-4 main-gradient-90-deg shadow-block p-4 rounded-md
+      group"
+      >
+        <div className="flex flex-col items-start gap-2">
+          <h4 className="font-bold text-[32px]">{tour.date}</h4>
+          <span className="text-[18px]">{tour.time}</span>
+        </div>
+        <div className="flex flex-col items-end gap-1">
+          <Link href={tour.ticketsUrl} className="text-accent text-link-hover">
+            Билеты
+          </Link>
+          <p className="text-xl">{tour.location}</p>
+          <p className="text-xl">
+            {tour.venue}: <b className="font-bold">{`“${tour.venueName}”`}</b>
+          </p>
+        </div>
       </div>
     </div>
   );
