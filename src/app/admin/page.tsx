@@ -1,6 +1,5 @@
-import { adminNav, Container } from "@/shared";
+import { adminNav, Container, Links } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
-import Link from "next/link";
 
 export default function Admin() {
   return (
@@ -19,12 +18,7 @@ export default function Admin() {
               >
                 <h2 className="text-xl font-bold mb-4">{item.title}</h2>
                 <p className="text-whites-200 mb-4">{item.description}</p>
-                <Link
-                  href={item.href}
-                  className="inline-flex items-center gap-2 text-accent border-accent border-b text-[18px] text-link-hover"
-                >
-                  Перейти
-                </Link>
+                <Links text={"Перейти"} href={item.href} size="16px" />
               </div>
             ))}
           </div>

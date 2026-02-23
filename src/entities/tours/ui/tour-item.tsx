@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ITour } from "../model/type";
 import { EditAdminButton } from "@/features/edit-admin-button";
 import { PUBLIC_ROUTES } from "@/../routes";
+import { Links } from "@/shared";
 
 type Props = {
   tour: ITour;
@@ -34,9 +35,7 @@ export const TourItem = ({ tour, isAdmin }: Props) => {
           <span className="text-[18px]">{tour.time}</span>
         </div>
         <div className="flex flex-col items-end gap-1">
-          <Link href={tour.ticketsUrl} className="text-accent text-link-hover">
-            Билеты
-          </Link>
+          <Links text={"Билеты"} href={tour.ticketsUrl} size="16px" />
           <p className="text-xl">{tour.location}</p>
           <p className="text-xl">
             {tour.venue}: <b className="font-bold">{`“${tour.venueName}”`}</b>
