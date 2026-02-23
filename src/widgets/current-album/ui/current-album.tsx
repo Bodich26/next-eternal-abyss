@@ -1,4 +1,4 @@
-import { Container, CustomButtonLink, Paragraph } from "@/shared";
+import { Buttons, Container, Paragraph } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { PUBLIC_ROUTES } from "@/../routes";
@@ -24,11 +24,12 @@ export const CurrentAlbum = () => {
               восстановлению справедливости."
               className="mb-14.5"
             />
-            <CustomButtonLink
-              text={"Все Альбомы"}
+            <Buttons
+              as="link"
+              href={PUBLIC_ROUTES.ALBUMS}
+              text="Все Альбомы"
               Icon={ArrowRight}
-              link={PUBLIC_ROUTES.ALBUMS}
-              className="w-[190px] justify-center max-sm:m-auto"
+              className="w-[190px] max-sm:m-auto"
             />
           </div>
         </div>

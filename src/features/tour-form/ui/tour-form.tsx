@@ -1,4 +1,4 @@
-export const NewsForm = () => {
+export const TourForm = () => {
   return (
     <form
       action=""

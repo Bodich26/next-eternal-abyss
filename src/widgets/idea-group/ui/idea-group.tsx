@@ -1,4 +1,4 @@
-import { Container, CustomButtonLink, Paragraph, Titles } from "@/shared";
+import { Buttons, Container, Paragraph, Titles } from "@/shared";
 import Image from "next/image";
 import { PUBLIC_ROUTES } from "@/../routes";
 
@@ -22,10 +22,11 @@ export const IdeaGroup = () => {
               история о сопротивлении, выборе и возрождении, переданная через
               звук и эмоции."
             />
-            <CustomButtonLink
+            <Buttons
+              as="link"
+              href={PUBLIC_ROUTES.ABOUT}
               text="Узнать Больше"
-              link={PUBLIC_ROUTES.ABOUT}
-              className="w-[190px] mt-[58px] justify-center max-lg:mr-auto max-lg:ml-auto"
+              className="w-[190px] mt-[58px] max-lg:mr-auto max-lg:ml-auto"
             />
           </div>
           <div className="shrink-0 relative w-[595px] h-[554px] max-md:w-full max-sm:h-[auto] max-sm:flex-col max-sm:flex max-sm:w-full max-sm:gap-4">
