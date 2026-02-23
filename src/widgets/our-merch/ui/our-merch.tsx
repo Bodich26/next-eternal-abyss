@@ -1,5 +1,5 @@
 import { getMerch, MerchImageItem } from "@/entities/merch";
-import { Container, CustomButtonLink, Titles } from "@/shared";
+import { Container, Buttons, Titles } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import { PUBLIC_ROUTES } from "@/../routes";
 
@@ -22,10 +22,11 @@ export const OurMerch = async () => {
             <MerchImageItem key={item.id} image={item.image} />
           ))}
         </div>
-        <CustomButtonLink
-          text={"Посмотреть Все"}
+        <Buttons
+          as="link"
+          href={PUBLIC_ROUTES.MERCH}
           Icon={ArrowRight}
-          link={PUBLIC_ROUTES.MERCH}
+          text="Посмотреть Все"
           className="w-[200px] justify-center m-auto mt-[58px] block"
         />
       </Container>

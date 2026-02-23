@@ -1,4 +1,4 @@
-import { NewsForm } from "@/features/news-form";
+import { NewForm } from "@/features/new-form";
 import { Container, Paragraph, Titles } from "@/shared";
 
 export const GroupNews = () => {
@@ -14,7 +14,7 @@ export const GroupNews = () => {
               музыка, туры, закулисье и важные анонсы напрямую от группы."
             />
           </div>
-          <NewsForm />
+          <NewForm />
         </div>
       </Container>
     </section>
