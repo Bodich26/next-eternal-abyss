@@ -22,46 +22,57 @@ export default async function TourId({ params }: Props) {
               "
             >
               <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
+                <div className="flex flex-col gap-2">
+                  <Inputs
+                    id={"1"}
+                    type={"text"}
+                    placeholder={"15 Марта 2026"}
+                    label={"Дата"}
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Inputs
+                    id={"2"}
+                    type={"text"}
+                    placeholder={"20:00"}
+                    label={"Время"}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
                 <Inputs
-                  id={"1"}
+                  id={"3"}
                   type={"text"}
-                  placeholder={"15 Марта 2026"}
-                  label={"Дата"}
-                />
-                <Inputs
-                  id={"2"}
-                  type={"text"}
-                  placeholder={"20:00"}
-                  label={"Время"}
+                  placeholder={"Берлин, Германия"}
+                  label={"Локация (Город, Страна)"}
                 />
               </div>
-              <Inputs
-                id={"3"}
-                type={"text"}
-                placeholder={"Берлин, Германия"}
-                label={"Локация (Город, Страна)"}
-              />
               <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
+                <div className="flex flex-col gap-2">
+                  <Inputs
+                    id={"4"}
+                    type={"text"}
+                    placeholder={"Клуб"}
+                    label={"Тип площадки"}
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Inputs
+                    id={"5"}
+                    type={"text"}
+                    placeholder={"Black Void"}
+                    label={"Название площадки"}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
                 <Inputs
-                  id={"4"}
-                  type={"text"}
-                  placeholder={"Клуб"}
-                  label={"Тип площадки"}
-                />
-                <Inputs
-                  id={"5"}
-                  type={"text"}
-                  placeholder={"Black Void"}
-                  label={"Название площадки"}
+                  id={"6"}
+                  type={"url"}
+                  placeholder={"https://example.com/tickets/berlin"}
+                  label={"Ссылка на билеты"}
                 />
               </div>
-              <Inputs
-                id={"6"}
-                type={"url"}
-                placeholder={"https://example.com/tickets/berlin"}
-                label={"Ссылка на билеты"}
-              />
-
               <div className="flex gap-4 pt-6 justify-between">
                 <Buttons
                   type="submit"
