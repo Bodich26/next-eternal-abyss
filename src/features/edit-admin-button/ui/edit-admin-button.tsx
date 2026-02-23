@@ -1,4 +1,4 @@
-import { CustomButtonLink } from "@/shared";
+import { Buttons } from "@/shared";
 
 type Props = {
   url: string;
@@ -19,7 +19,7 @@ export const EditAdminButton = ({ url, idUrl }: Props) => {
       z-10
     "
     >
-      <CustomButtonLink text={"Изменить"} link={URL_REDIRECT} />
+      <Buttons as="link" text={"Изменить"} href={URL_REDIRECT} />
     </div>
   );
 };
