@@ -1,34 +1,51 @@
-import { HTMLInputTypeAttribute } from "react";
+import clsx from "clsx";
+import { InputHTMLAttributes } from "react";
 
 type Props = {
   id: string;
-  type: HTMLInputTypeAttribute;
+  type: InputHTMLAttributes<HTMLInputElement>["type"];
   placeholder: string;
-  label: string;
-};
+  label?: string;
+  className?: string;
+} & Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "id" | "type" | "placeholder" | "className"
+>;
 
-export const Inputs = ({ id, type, placeholder, label }: Props) => {
-  return (
-    <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="text-sm text-whites-100/60">
-        {label}
-      </label>
-      <input
-        id={id}
-        type={type}
-        required
-        placeholder={placeholder}
-        className="
-                    bg-transparent
+export const Inputs = ({
+  id,
+  type,
+  placeholder,
+  label,
+  className,
+  ...rest
+}: Props) => {
+  const baseStyles = `bg-transparent
                     border border-whites-100/10
                     rounded-md
                     px-3 py-2
                     text-whites-100
                     focus:border-accent
                     outline-none
-                    transition-colors
-                  "
+                    transition-colors`;
+
+  const finalClassName = clsx(baseStyles, className);
+
+  return (
+    <>
+      {label && (
+        <label htmlFor={id} className="text-sm text-whites-100/60">
+          {label}
+        </label>
+      )}
+      <input
+        id={id}
+        type={type}
+        required
+        placeholder={placeholder}
+        className={finalClassName}
+        {...rest}
       />
-    </div>
+    </>
   );
 };
