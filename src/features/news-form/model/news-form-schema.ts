@@ -2,9 +2,12 @@ import z from "zod";
 
 export const newsFormSchema = z.object({
   email: z.email({
-    message: "Enter your Email.",
+    message: "Укажите вашу почту.",
   }),
-  firstName: z.string().trim().min(3, {
-    message: "Name must be at least 3 characters.",
-  }),
+  firstName: z
+    .string()
+    .min(3, "Имя слишком короткое")
+    .max(20, "Имя слишком длинное"),
 });
+
+export type FormValues = z.infer<typeof newsFormSchema>;
