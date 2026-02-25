@@ -13,6 +13,12 @@ export default async function Albums() {
       />
       <section className="mt-[100px] max-md:mt-[30px] mb-9">
         <Container>
+          {!albumsData ||
+            (albumsData.length === 0 && (
+              <p className="text-whites-200 text-lg text-center">
+                Альбомы не найдено!
+              </p>
+            ))}
           <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
             {albumsData
               .sort((a, b) => b.releaseYear - a.releaseYear)

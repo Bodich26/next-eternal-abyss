@@ -16,15 +16,7 @@ export default async function AlbumId({ params }: Props) {
       <section className="mt-[100px] max-md:mt-[30px] mb-16">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <div
-              className="
-                rounded-xl
-                main-gradient-90-deg
-                shadow-block
-                p-8
-                flex flex-col gap-8
-              "
-            >
+            <div className="rounded-xl main-gradient-90-deg shadow-block p-8 flex flex-col gap-8">
               {/* Дата и время */}
               <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
                 <div className="flex flex-col gap-2">

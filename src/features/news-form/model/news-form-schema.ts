@@ -2,7 +2,7 @@ import z from "zod";
 
 export const newsFormSchema = z.object({
   email: z.email({
-    message: "Укажите вашу почту.",
+    message: "Укажите вашу почту",
   }),
   firstName: z
     .string()
