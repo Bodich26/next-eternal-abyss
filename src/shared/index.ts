@@ -9,3 +9,4 @@ export { eventsItem } from "./constants/events-item";
 export { adminNav } from "./constants/admin-nav";
 export { Inputs } from "./ui/inputs";
 export { Buttons } from "./ui/buttons";
+export { Textareas } from "./ui/textareas";
