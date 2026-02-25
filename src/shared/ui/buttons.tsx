@@ -27,26 +27,11 @@ type Props = ButtonProps | LinkProps;
 export const Buttons = (props: Props) => {
   const { text, Icon, variant = "primary", className } = props;
 
-  const baseStyles = `
-    px-5 py-3
-    rounded-md
-    cursor-pointer
-    flex items-center justify-center
-    gap-2.5
-    transition-colors
-  `;
+  const baseStyles = `px-5 py-3 rounded-md cursor-pointer flex items-center justify-center gap-2.5 transition-colors`;
 
   const variants: Record<Variant, string> = {
-    primary: `
-      btn-gradient
-      bg-accent
-      hover:opacity-90
-    `,
-    danger: `
-      border border-red-500/40
-      text-red-400
-      hover:bg-red-500/10
-    `,
+    primary: `btn-gradient bg-accent hover:opacity-90`,
+    danger: `border border-red-500/40 text-red-400 hover:bg-red-500/10`,
   };
 
   const finalClassName = clsx(baseStyles, variants[variant], className);
