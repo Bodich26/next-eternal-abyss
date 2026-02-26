@@ -1,7 +1,8 @@
 "use client";
-import { Buttons, Inputs, Textareas } from "@/shared";
+import { Buttons, Inputs } from "@/shared";
 import { useAlbumForm } from "../model/use-album-form";
 import { IAlbum } from "@/entities/albums/model/type";
+import { useToggleTrackAlbum } from "../model/use-toggle-track-album";
 
 type Props = {
   initialData: IAlbum;
@@ -9,6 +10,9 @@ type Props = {
 
 export const AlbumForm = ({ initialData }: Props) => {
   const { form, isError, isSuccess } = useAlbumForm(initialData);
+  const { trackInput, setTrackInput, handleAddTrack, handleRemoveTrack } =
+    useToggleTrackAlbum();
+
   return (
     <form
       className="max-w-4xl mx-auto"
@@ -25,11 +29,14 @@ export const AlbumForm = ({ initialData }: Props) => {
             children={(field) => (
               <>
                 <div className="flex flex-col gap-2">
+                  <label htmlFor="title" className="text-sm text-whites-100/60">
+                    Название альбома
+                  </label>
                   <Inputs
                     id="title"
                     type="text"
+                    required
                     placeholder="Shadows of the Void"
-                    label="Название альбома"
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
@@ -48,11 +55,17 @@ export const AlbumForm = ({ initialData }: Props) => {
             children={(field) => (
               <>
                 <div className="flex flex-col gap-2">
+                  <label
+                    htmlFor="releaseYear"
+                    className="text-sm text-whites-100/60"
+                  >
+                    Год релиза
+                  </label>
                   <Inputs
                     id="releaseYear"
                     type="number"
+                    required
                     placeholder="2026"
-                    label="Год релиза"
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(Number(e.target.value))}
@@ -72,11 +85,17 @@ export const AlbumForm = ({ initialData }: Props) => {
           children={(field) => (
             <>
               <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="shortDescription"
+                  className="text-sm text-whites-100/60"
+                >
+                  Краткое описание
+                </label>
                 <Inputs
                   id="shortDescription"
                   type="text"
+                  required
                   placeholder="Дебютный полноформатник, полный хаоса и брейкдаунов"
-                  label="Краткое описание"
                   value={field.state.value}
                   onBlur={field.handleBlur}
                   onChange={(e) => field.handleChange(e.target.value)}
@@ -96,11 +115,14 @@ export const AlbumForm = ({ initialData }: Props) => {
             children={(field) => (
               <>
                 <div className="flex flex-col gap-2">
+                  <label htmlFor="image" className="text-sm text-whites-100/60">
+                    Картинка альбома
+                  </label>
                   <Inputs
                     id="image"
                     type="text"
+                    required
                     placeholder="/albums/shadow.jpg"
-                    label="Картинка альбома"
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
@@ -119,22 +141,52 @@ export const AlbumForm = ({ initialData }: Props) => {
             children={(field) => (
               <>
                 <div className="flex flex-col gap-2">
-                  <Textareas
-                    id="tracklist"
-                    placeholder={`
-                      
-                      `}
-                    label="Список треков"
-                    value={field.state.value}
-                    onBlur={field.handleBlur}
-                    onChange={(e) => field.handleChange(e.target.value)}
-                    className=" placeholder:text-start"
-                  />
+                  <label
+                    htmlFor="tracklist"
+                    className="text-sm text-whites-100/60"
+                  >
+                    Название трека
+                  </label>
+                  <div className="flex justify-between gap-4">
+                    <Inputs
+                      id="tracklist"
+                      type="text"
+                      placeholder="Abyssal Throne"
+                      value={trackInput}
+                      onBlur={field.handleBlur}
+                      onChange={(e) => setTrackInput(e.target.value)}
+                    />
+                    <Buttons
+                      onClick={() =>
+                        handleAddTrack(field.state.value, field.handleChange)
+                      }
+                      className="px-3! py-2! w-full"
+                      type="button"
+                      text="Добавить"
+                      as="button"
+                      variant="primary"
+                      disabled={!trackInput.trim()}
+                    />
+                  </div>
                   {field.state.meta.errors.length > 0 && (
                     <em className="text-red-400/80 text-sm">
                       {field.state.meta.errors[0]?.message}
                     </em>
                   )}
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h4 className="text-sm text-whites-100/60">
+                    Список добавленных треков:
+                  </h4>
+                  <ul className="flex flex-col gap-1">
+                    {field.state.value.length === 0 ? (
+                      <p>В альбоме нет треков</p>
+                    ) : (
+                      field.state.value.map((track, index) => (
+                        <li key={index}>{track}</li>
+                      ))
+                    )}
+                  </ul>
                 </div>
               </>
             )}

@@ -26,11 +26,14 @@ export const TourForm = ({ initialData }: Props) => {
             children={(field) => (
               <>
                 <div className="flex flex-col gap-2">
+                  <label htmlFor="date" className="text-sm text-whites-100/60">
+                    Дата
+                  </label>
                   <Inputs
                     id="date"
                     type="text"
+                    required
                     placeholder="15 Марта 2026"
-                    label="Дата"
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
@@ -49,11 +52,14 @@ export const TourForm = ({ initialData }: Props) => {
             children={(field) => (
               <>
                 <div className="flex flex-col gap-2">
+                  <label htmlFor="time" className="text-sm text-whites-100/60">
+                    Время
+                  </label>
                   <Inputs
                     id="time"
                     type="text"
+                    required
                     placeholder="20:00"
-                    label="Время"
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
@@ -73,11 +79,17 @@ export const TourForm = ({ initialData }: Props) => {
           children={(field) => (
             <>
               <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="location"
+                  className="text-sm text-whites-100/60"
+                >
+                  Локация (Город, Страна)
+                </label>
                 <Inputs
                   id="location"
                   type="text"
+                  required
                   placeholder="Берлин, Германия"
-                  label="Локация (Город, Страна)"
                   value={field.state.value}
                   onBlur={field.handleBlur}
                   onChange={(e) => field.handleChange(e.target.value)}
@@ -97,11 +109,14 @@ export const TourForm = ({ initialData }: Props) => {
             children={(field) => (
               <>
                 <div className="flex flex-col gap-2">
+                  <label htmlFor="venue" className="text-sm text-whites-100/60">
+                    Тип площадки
+                  </label>
                   <Inputs
                     id="venue"
                     type="text"
+                    required
                     placeholder="Клуб"
-                    label="Тип площадки"
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
@@ -120,11 +135,17 @@ export const TourForm = ({ initialData }: Props) => {
             children={(field) => (
               <>
                 <div className="flex flex-col gap-2">
+                  <label
+                    htmlFor="venueName"
+                    className="text-sm text-whites-100/60"
+                  >
+                    Название площадки
+                  </label>
                   <Inputs
                     id="venueName"
                     type="text"
+                    required
                     placeholder="Black Void"
-                    label="Название площадки"
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
@@ -144,11 +165,17 @@ export const TourForm = ({ initialData }: Props) => {
           children={(field) => (
             <>
               <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="ticketsUrl"
+                  className="text-sm text-whites-100/60"
+                >
+                  Ссылка на билеты
+                </label>
                 <Inputs
                   id="ticketsUrl"
                   type="url"
+                  required
                   placeholder="https://example.com/tickets/berlin"
-                  label="Ссылка на билеты"
                   value={field.state.value}
                   onBlur={field.handleBlur}
                   onChange={(e) => field.handleChange(e.target.value)}

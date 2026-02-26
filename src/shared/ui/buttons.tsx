@@ -27,7 +27,7 @@ type Props = ButtonProps | LinkProps;
 export const Buttons = (props: Props) => {
   const { text, Icon, variant = "primary", className } = props;
 
-  const baseStyles = `px-5 py-3 rounded-md cursor-pointer flex items-center justify-center gap-2.5 transition-colors`;
+  const baseStyles = `disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 px-5 py-3 rounded-md cursor-pointer flex items-center justify-center gap-2.5 transition-colors`;
 
   const variants: Record<Variant, string> = {
     primary: `btn-gradient bg-accent hover:opacity-90`,

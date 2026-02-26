@@ -5,7 +5,6 @@ type Props = {
   id: string;
   type: InputHTMLAttributes<HTMLInputElement>["type"];
   placeholder: string;
-  label?: string;
   className?: string;
 } & Omit<
   InputHTMLAttributes<HTMLInputElement>,
@@ -16,7 +15,6 @@ export const Inputs = ({
   id,
   type,
   placeholder,
-  label,
   className,
   ...rest
 }: Props) => {
@@ -25,20 +23,12 @@ export const Inputs = ({
   const finalClassName = clsx(baseStyles, className);
 
   return (
-    <>
-      {label && (
-        <label htmlFor={id} className="text-sm text-whites-100/60">
-          {label}
-        </label>
-      )}
-      <input
-        id={id}
-        type={type}
-        required
-        placeholder={placeholder}
-        className={finalClassName}
-        {...rest}
-      />
-    </>
+    <input
+      id={id}
+      type={type}
+      placeholder={placeholder}
+      className={finalClassName}
+      {...rest}
+    />
   );
 };

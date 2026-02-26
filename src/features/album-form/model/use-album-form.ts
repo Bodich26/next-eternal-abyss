@@ -23,7 +23,7 @@ export const useAlbumForm = (initialData: IAlbum) => {
       title: initialData?.title ?? "",
       releaseYear: initialData?.releaseYear ?? "",
       shortDescription: initialData?.shortDescription ?? "",
-      tracklist: initialData?.tracklist?.join("\n") ?? "",
+      tracklist: initialData?.tracklist ?? [],
       image: initialData?.image ?? "",
     },
     validators: {
@@ -39,5 +39,9 @@ export const useAlbumForm = (initialData: IAlbum) => {
     },
   });
 
-  return { form, isSuccess, isError };
+  return {
+    form,
+    isSuccess,
+    isError,
+  };
 };
