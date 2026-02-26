@@ -12,15 +12,7 @@ export const albumFormSchema = z.object({
     .trim()
     .min(15, "Минимум 15 символов")
     .max(60, "Максимум 60 символов"),
-  tracklist: z
-    .string()
-    .min(1, "Введите хотя бы один трек")
-    .transform((value) =>
-      value
-        .split("\n")
-        .map((t) => t.trim())
-        .filter(Boolean),
-    ),
+  tracklist: z.array(z.string()).min(1, "Минимум 1 трек"),
   image: z.string({ message: "Укажите ссылка на картинку альбома" }).trim(),
 });
 
