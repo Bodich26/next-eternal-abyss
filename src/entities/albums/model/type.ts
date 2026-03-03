@@ -1,7 +1,7 @@
 export interface IAlbum {
   id: string;
   title: string;
-  releaseYear: number;
+  releaseYear: string;
   shortDescription: string;
   tracklist: string[];
   image: string;

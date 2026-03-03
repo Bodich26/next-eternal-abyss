@@ -63,12 +63,12 @@ export const AlbumForm = ({ initialData }: Props) => {
                   </label>
                   <Inputs
                     id="releaseYear"
-                    type="number"
+                    type="text"
                     required
                     placeholder="2026"
                     value={field.state.value}
                     onBlur={field.handleBlur}
-                    onChange={(e) => field.handleChange(Number(e.target.value))}
+                    onChange={(e) => field.handleChange(e.target.value)}
                   />
                   {field.state.meta.errors.length > 0 && (
                     <em className="text-red-400/80 text-sm">
@@ -183,7 +183,24 @@ export const AlbumForm = ({ initialData }: Props) => {
                       <p>В альбоме нет треков</p>
                     ) : (
                       field.state.value.map((track, index) => (
-                        <li key={index}>{track}</li>
+                        <li
+                          className="inline-flex items-center gap-3"
+                          key={index}
+                        >
+                          {track}{" "}
+                          <span
+                            onClick={() =>
+                              handleRemoveTrack(
+                                index,
+                                field.state.value,
+                                field.handleChange,
+                              )
+                            }
+                            className="cursor-pointer border border-red-500/40 text-red-400 hover:bg-red-500/10 rounded-md py-[1px] px-3"
+                          >
+                            x
+                          </span>
+                        </li>
                       ))
                     )}
                   </ul>
@@ -217,7 +234,7 @@ export const AlbumForm = ({ initialData }: Props) => {
       </div>
       {isSuccess && (
         <div className="text-green-400 text-sm text-center">
-          Тур успешно сохранен!
+          Альбом успешно сохранен!
         </div>
       )}
       {isError && (

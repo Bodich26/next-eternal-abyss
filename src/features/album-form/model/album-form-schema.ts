@@ -6,7 +6,11 @@ export const albumFormSchema = z.object({
     .trim()
     .min(5, "Минимум 5 символов")
     .max(50, "Максимум 50 символов"),
-  releaseYear: z.number().min(4, "Минимум 4 цифры").max(4, "Максимум 4 цифры"),
+  releaseYear: z
+    .string()
+    .min(4, "Минимум 4 цифры")
+    .max(4, "Максимум 4 цифры")
+    .trim(),
   shortDescription: z
     .string()
     .trim()
