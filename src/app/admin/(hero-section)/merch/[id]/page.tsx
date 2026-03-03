@@ -1,4 +1,6 @@
-import { Container } from "@/shared";
+import { Container, Links } from "@/shared";
+import { PUBLIC_ROUTES } from "../../../../../../routes";
+import { ArrowLeft } from "lucide-react";
 import { HeroTitle } from "@/widgets/hero-title";
 
 type Props = {
@@ -8,10 +10,15 @@ export default async function MerchId({ params }: Props) {
   const id = (await params).id;
   return (
     <>
-      <HeroTitle
-        title="Eternal Abyss"
-        text={`Редактирование мерча Id: ${id}`}
-      />
+      <HeroTitle title="Eternal Abyss" text={`Редактирование мерча Id: ${id}`}>
+        <Links
+          text={"Вернуться к vерчу"}
+          href={`${PUBLIC_ROUTES.ADMIN}/${PUBLIC_ROUTES.MERCH}`}
+          size={"16px"}
+          Icon={ArrowLeft}
+          className="inline-flex flex-row-reverse items-center"
+        />
+      </HeroTitle>
 
       <section className="mt-[100px] max-md:mt-[30px] mb-16">
         <Container>
