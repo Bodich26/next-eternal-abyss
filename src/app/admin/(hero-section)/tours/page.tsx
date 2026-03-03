@@ -1,12 +1,22 @@
 import { getTours, TourItem } from "@/entities/tours";
-import { Container } from "@/shared";
+import { Container, Links } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
+import { PUBLIC_ROUTES } from "@/../routes";
+import { ArrowLeft } from "lucide-react";
 
 export default async function Tours() {
   const toursData = await getTours({ isCached: false });
   return (
     <>
-      <HeroTitle title="Eternal Abyss" text="Админка для управления Турами." />
+      <HeroTitle title="Eternal Abyss" text={"Админка для управления Турами."}>
+        <Links
+          text={"Вернуться к админ списку"}
+          href={`${PUBLIC_ROUTES.ADMIN}`}
+          size={"16px"}
+          Icon={ArrowLeft}
+          className="inline-flex flex-row-reverse items-center"
+        />
+      </HeroTitle>
       <section className="mt-[100px] max-md:mt-[30px] mb-9">
         <Container>
           {!toursData ||
