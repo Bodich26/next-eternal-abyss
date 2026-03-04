@@ -1,14 +1,16 @@
-export interface IMerch {
+import z from "zod";
+
+export const sizeEnumMerch = z.enum(["S", "M", "L", "XL", "2XL"]);
+export type TSizeMerch = z.infer<typeof sizeEnumMerch>;
+
+export type IMerch = {
   id: string;
   title: string;
-  price: number;
-  currency: string;
+  price: string;
+  sizes: TSizeMerch[];
   shortDescription: string;
-  sizes?: TSize[];
   image: string;
-}
-
-export type TSize = "S" | "M" | "L" | "XL" | "2XL";
+};
 
 export type MerchCached = {
   isCached?: boolean;

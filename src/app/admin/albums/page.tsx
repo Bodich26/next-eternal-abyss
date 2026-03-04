@@ -31,7 +31,7 @@ export default async function Albums() {
             ))}
           <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
             {albumsData
-              .sort((a, b) => b.releaseYear - a.releaseYear)
+              .sort((a, b) => Number(b.releaseYear) - Number(a.releaseYear))
               .map((album) => (
                 <AlbumItem key={album.id} album={album} isAdmin={true} />
               ))}

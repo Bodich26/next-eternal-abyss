@@ -2,8 +2,7 @@
   {
     "id": "1",
     "title": "Футболка Eternal Abyss",
-    "price": 22.99,
-    "currency": "USD",
+    "price": "22.99",
     "shortDescription": "Чёрная футболка с изображением обложки альбома",
     "sizes": ["S", "M", "L", "XL", "2XL"],
     "image": "/merch/1.jpg"
@@ -11,8 +10,7 @@
   {
     "id": "2",
     "title": "Чёрная худи Voidborn",
-    "price": 32.99,
-    "currency": "USD",
+    "price": "32.99",
     "shortDescription": "Чёрная толстовка с капюшоном и логотипом альбома на спине",
     "sizes": ["S", "M", "L", "XL"],
     "image": "/merch/2.jpg"
@@ -20,8 +18,7 @@
   {
     "id": "3",
     "title": "Nike кроссовки",
-    "price": 25.99,
-    "currency": "USD",
+    "price": "25.99",
     "shortDescription": "Белые кроссовки с принтом в виде короны из личинок",
     "sizes": ["42", "43", "44"],
     "image": "/merch/3.jpg"
@@ -29,35 +26,31 @@
   {
     "id": "4",
     "title": "Лук Shadow of the Void",
-    "price": 24.99,
-    "currency": "USD",
+    "price": "24.99",
     "shortDescription": "Черный лук с принтом в виде силуэта человека, погруженного в тьму",
-    "sizes": ["One Size"],
+    "sizes": [],
     "image": "/merch/4.jpg"
   },
   {
     "id": "5",
     "title": "Necrotic Sermons Vinyl LP",
-    "price": 34.99,
-    "currency": "USD",
+    "price": "34.99",
     "shortDescription": "Лимитированный чёрный винил + цифровой код",
-    "sizes": [],
+    "sizes": ["S", "M", "L", "XL"],
     "image": "/merch/5.jpg"
   },
   {
     "id": "6",
     "title": "Voidborn Patch Set",
-    "price": 12.99,
-    "currency": "USD",
+    "price": "12.99",
     "shortDescription": "Набор из 5 нашивок с треками альбома",
-    "sizes": [],
+    "sizes": ["S", "M", "L", "XL"],
     "image": "/merch/6.jpg"
   },
   {
     "id": "7",
     "title": "PC Eternal Abyss",
-    "price": 1200,
-    "currency": "USD",
+    "price": "1200",
     "shortDescription": "Комьютер с эксклюзивным дизайном в стиле альбома Eternal Abyss",
     "sizes": [],
     "image": "/merch/7.jpg"
