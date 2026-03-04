@@ -1,7 +1,7 @@
 import { getMerch, MerchItem } from "@/entities/merch";
 import { Container, Links } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
-import { PUBLIC_ROUTES } from "../../../../../routes";
+import { PUBLIC_ROUTES } from "@/../routes";
 import { ArrowLeft } from "lucide-react";
 
 export default async function Merch() {

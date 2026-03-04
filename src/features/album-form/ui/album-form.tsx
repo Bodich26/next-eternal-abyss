@@ -12,7 +12,6 @@ export const AlbumForm = ({ initialData }: Props) => {
   const { form, isError, isSuccess } = useAlbumForm(initialData);
   const { trackInput, setTrackInput, handleAddTrack, handleRemoveTrack } =
     useToggleTrackAlbum();
-
   return (
     <form
       className="max-w-4xl mx-auto"

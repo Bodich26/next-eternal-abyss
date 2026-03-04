@@ -48,7 +48,7 @@ export const MerchItem = ({ merch, isAdmin }: Props) => {
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-bold tracking-wide">{merch.title}</h3>
               <span className="text-accent font-semibold">
-                {merch.price} {merch.currency}
+                {merch.price} USD
               </span>
             </div>
             <p className="text-whites-100/70 text-sm leading-relaxed">
