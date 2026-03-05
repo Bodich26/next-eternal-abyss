@@ -1,9 +1,10 @@
-import { Buttons, Container, Paragraph } from "@/shared";
+import { Buttons, Container, currentAlbumData, Paragraph } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { PUBLIC_ROUTES } from "@/../routes";
 
 export const CurrentAlbum = () => {
+  const currentAlbum = currentAlbumData;
   return (
     <section>
       <Container className="flex justify-end max-[1060]:justify-center -translate-y-15">
@@ -16,14 +17,9 @@ export const CurrentAlbum = () => {
               Текущий альбом
             </span>
             <h1 className="mb-4 font-unifractur text-[82px] leading-20 max-sm:text-7xl max-sm:leading-18">
-              Necrotic Sermons
+              {currentAlbum.title}
             </h1>
-            <Paragraph
-              text="Дебютный альбом Eternal Abyss — это история падения и возрождения,
-              борьбы со злом. Через ярость, тьму и хаос музыка ведёт к
-              восстановлению справедливости."
-              className="mb-14.5"
-            />
+            <Paragraph text={currentAlbum.text} className="mb-14.5" />
             <Buttons
               as="link"
               href={PUBLIC_ROUTES.ALBUMS}
@@ -35,7 +31,7 @@ export const CurrentAlbum = () => {
         </div>
         <div className="absolute left-[15px] top-1/2 -translate-y-1/2 mobile-block-album-img">
           <Image
-            src={"/albums/necrotic.jpg"}
+            src={currentAlbum.image}
             alt={"Album"}
             width={415}
             height={412}
