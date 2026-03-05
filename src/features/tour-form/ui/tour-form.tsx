@@ -192,7 +192,7 @@ export const TourForm = ({ initialData }: Props) => {
         <form.Subscribe
           selector={(state) => [state.canSubmit, state.isSubmitting]}
           children={([canSubmit, isSubmitting]) => (
-            <div className="flex gap-4 pt-6 justify-between">
+            <div className="flex gap-4 pt-6 justify-between max-sm:flex-col">
               <Buttons
                 className="min-w-[210px]"
                 type="submit"

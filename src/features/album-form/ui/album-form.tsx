@@ -146,9 +146,10 @@ export const AlbumForm = ({ initialData }: Props) => {
                   >
                     Название трека
                   </label>
-                  <div className="flex justify-between gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <Inputs
                       id="tracklist"
+                      className="w-full"
                       type="text"
                       placeholder="Abyssal Throne"
                       value={trackInput}
@@ -159,7 +160,7 @@ export const AlbumForm = ({ initialData }: Props) => {
                       onClick={() =>
                         handleAddTrack(field.state.value, field.handleChange)
                       }
-                      className="px-3! py-2! w-full"
+                      className="w-full sm:w-auto px-7! py-2!"
                       type="button"
                       text="Добавить"
                       as="button"
@@ -177,7 +178,7 @@ export const AlbumForm = ({ initialData }: Props) => {
                   <h4 className="text-sm text-whites-100/60">
                     Список добавленных треков:
                   </h4>
-                  <ul className="flex flex-col gap-1">
+                  <ul className="flex flex-row gap-6 flex-wrap">
                     {field.state.value.length === 0 ? (
                       <p>В альбоме нет треков</p>
                     ) : (
@@ -211,7 +212,7 @@ export const AlbumForm = ({ initialData }: Props) => {
         <form.Subscribe
           selector={(state) => [state.canSubmit, state.isSubmitting]}
           children={([canSubmit, isSubmitting]) => (
-            <div className="flex gap-4 pt-6 justify-between">
+            <div className="flex gap-4 pt-6 justify-between max-sm:flex-col">
               <Buttons
                 className="min-w-[210px]"
                 type="submit"

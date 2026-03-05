@@ -114,8 +114,9 @@ export const MerchForm = ({ initialData }: Props) => {
                   <label htmlFor="sizes" className="text-sm text-whites-100/60">
                     Размеры
                   </label>
-                  <div className="flex justify-between gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <Inputs
+                      className="w-full"
                       id="sizes"
                       type="text"
                       placeholder="M, L"
@@ -127,7 +128,7 @@ export const MerchForm = ({ initialData }: Props) => {
                       onClick={() =>
                         handleAddSize(field.state.value, field.handleChange)
                       }
-                      className="px-3! py-2! w-full"
+                      className="w-full sm:w-auto px-7! py-2!"
                       type="button"
                       text="Добавить"
                       as="button"
@@ -205,7 +206,7 @@ export const MerchForm = ({ initialData }: Props) => {
         <form.Subscribe
           selector={(state) => [state.canSubmit, state.isSubmitting]}
           children={([canSubmit, isSubmitting]) => (
-            <div className="flex gap-4 pt-6 justify-between">
+            <div className="flex gap-4 pt-6 justify-between max-sm:flex-col">
               <Buttons
                 className="min-w-[210px]"
                 type="submit"
