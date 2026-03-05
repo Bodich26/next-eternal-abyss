@@ -21,7 +21,7 @@ export const useMerchForm = (initialData: IMerch) => {
   const form = useForm({
     defaultValues: {
       title: initialData?.title ?? "",
-      price: initialData?.price ?? 0,
+      price: initialData?.price ?? "",
       shortDescription: initialData?.shortDescription ?? "",
       sizes: initialData?.sizes ?? [],
       image: initialData?.image ?? "",

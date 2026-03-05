@@ -1,26 +1,23 @@
 "use client";
-import { TSizeMerch } from "@/entities/merch";
 import React from "react";
 
 export const useToggleSizeMerch = () => {
   const [sizeInput, setSizeInput] = React.useState<string>("");
 
   const handleAddSize = (
-    currentSizes: TSizeMerch[],
-    onChange: (s: TSizeMerch[]) => void,
+    currentSizes: string[],
+    onChange: (s: string[]) => void,
   ) => {
-    const trimmed = sizeInput.trim().toUpperCase() as TSizeMerch;
+    if (!sizeInput.trim()) return;
 
-    if (!trimmed) return;
-
-    onChange([...currentSizes, trimmed]);
+    onChange([...currentSizes, sizeInput.trim().toUpperCase()]);
     setSizeInput("");
   };
 
   const handleRemoveSize = (
     index: number,
-    currentSizes: TSizeMerch[],
-    onChange: (s: TSizeMerch[]) => void,
+    currentSizes: string[],
+    onChange: (s: string[]) => void,
   ) => {
     onChange(currentSizes.filter((_, i) => i !== index));
   };
