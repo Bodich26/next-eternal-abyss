@@ -4,33 +4,37 @@ import { API_ROUTES } from "@/../routes";
 
 export const getTours = async ({ isCached }: TourCached): Promise<ITour[]> => {
   const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.TOURS}`;
+  try {
+    if (!URL) {
+      throw new Error("URL для получения туров не задан");
+    }
 
-  if (!URL) {
-    throw new Error("URL для получения туров не задан");
+    const fetchOptions = isCached
+      ? {
+          cache: "force-cache" as const,
+          next: {
+            revalidate: 60,
+            tags: ["tours"],
+          },
+        }
+      : { cache: "no-store" as const };
+
+    const res = await fetch(URL, fetchOptions);
+
+    if (!res.ok) {
+      if (res.status === 404) notFound();
+      throw new Error(`HTTP error: ${res.status}`);
+    }
+
+    const tours: ITour[] = await res.json();
+
+    if (!Array.isArray(tours)) {
+      throw new Error("Некорректный формат ответа");
+    }
+
+    return tours;
+  } catch (error) {
+    console.error("Fetch error:", error);
+    throw error;
   }
-
-  const fetchOptions = isCached
-    ? {
-        cache: "force-cache" as const,
-        next: {
-          revalidate: 60,
-          tags: ["tours"],
-        },
-      }
-    : { cache: "no-store" as const };
-
-  const res = await fetch(URL, fetchOptions);
-
-  if (res.status === 404) {
-    notFound();
-  }
-  if (!res.ok) throw new Error(`Ошибка сервера: ${res.status}`);
-
-  const tours: ITour[] = await res.json();
-
-  if (!Array.isArray(tours)) {
-    throw new Error("Некорректный формат ответа");
-  }
-
-  return tours;
 };
