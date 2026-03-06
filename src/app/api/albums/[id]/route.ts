@@ -24,9 +24,11 @@ export async function GET(
     return NextResponse.json(currentAlbum);
   } catch (error) {
     console.error("API ERROR:", error);
-
     return NextResponse.json(
-      { message: "Внутренняя ошибка сервера" },
+      {
+        error: "Server error",
+        message: (error as Error).message || "Внутренняя ошибка сервера",
+      },
       { status: 500 },
     );
   }

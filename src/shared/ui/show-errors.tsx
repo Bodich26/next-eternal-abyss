@@ -21,9 +21,12 @@ export const ShowErrors = ({
               className="mb-5"
             />
             <Buttons
+              type="reset"
               as="button"
               text="Попробовать снова"
+              variant="primary"
               onClick={() => reset()}
+              className="m-auto"
             />
           </div>
         </Container>
