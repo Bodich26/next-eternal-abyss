@@ -1,10 +1,9 @@
-import { getTours, TourItem } from "@/entities/tours";
 import { Container, Links, Titles } from "@/shared";
 import { ArrowRight } from "lucide-react";
 import { PUBLIC_ROUTES } from "@/../routes";
+import { TourItemSkeleton } from "./tour-item-skeleton";
 
-export const ToursConcerts = async () => {
-  const toursData = await getTours({ isCached: true });
+export const ToursSkeleton = () => {
   return (
     <section className="mt-[120px] max-[425]:mt-[80px]!">
       <Container>
@@ -18,9 +17,10 @@ export const ToursConcerts = async () => {
           />
           <Titles text={"ТУРЫ И КОНЦЕРТЫ"} as={"h3"} />
         </div>
-        <div className=" grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:overflow-y-auto max-sm:max-h-[80vh]">
-          {toursData.slice(0, 6).map((tours) => (
-            <TourItem key={tours.id} tour={tours} />
+
+        <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:overflow-y-auto max-sm:h-[80vh]">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <TourItemSkeleton key={index} />
           ))}
         </div>
       </Container>
