@@ -16,3 +16,4 @@ export { TourItemSkeleton } from "./ui/tour-item-skeleton";
 export { MerchItemSkeleton } from "./ui/merch-item-skeleton";
 export { ToursSkeleton } from "./ui/tours-skeleton";
 export { MerchSkeleton } from "./ui/merch-skeleton";
+export { ShowErrors } from "./ui/show-errors";
