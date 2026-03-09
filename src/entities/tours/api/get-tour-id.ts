@@ -8,7 +8,7 @@ export const getTourId = async (id: string): Promise<ITour> => {
       throw new Error("Id тура не передан");
     }
 
-    const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.TOURS}/${id}`;
+    const URL = `${API_ROUTES.BASE_URL}${API_ROUTES.BASE_API}${API_ROUTES.TOURS}/${id}`;
 
     if (!URL) {
       throw new Error("URL для получения туров не задан");

@@ -47,14 +47,14 @@ export default function Contact() {
       <section className="mb-9 max-md:pt-4 mt-[100px] max-md:mt-[64px] max-md:text-center">
         <Container>
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-block">
+            <div className="relative h-[400px] rounded-md overflow-hidden shadow-block">
               <Image
                 src="/bg-group.jpg"
                 alt="Live performance"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/40 rounded-md" />
             </div>
             <div className="space-y-4">
               <Titles as="h3" text="Мы открыты к сотрудничеству" />

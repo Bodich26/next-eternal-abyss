@@ -3,7 +3,7 @@ import { ITour, TourCached } from "../model/type";
 import { API_ROUTES } from "@/../routes";
 
 export const getTours = async ({ isCached }: TourCached): Promise<ITour[]> => {
-  const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.TOURS}`;
+  const URL = `${API_ROUTES.BASE_URL}${API_ROUTES.BASE_API}${API_ROUTES.TOURS}`;
   try {
     if (!URL) {
       throw new Error("URL для получения туров не задан");

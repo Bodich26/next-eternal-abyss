@@ -7,24 +7,13 @@ type Props = {
 
 export const TeamItem = ({ musician }: Props) => {
   return (
-    <div
-      className="space-y-4 text-center group relative
-              rounded-md
-              main-gradient-90-deg
-              shadow-block
-              transition-all duration-300
-              hover:scale-[1.02]"
-    >
-      <div className="relative w-full h-56 overflow-hidden">
+    <div className="space-y-4 text-center group relative rounded-md main-gradient-90-deg shadow-block transition-all duration-300 hover:scale-[1.02]">
+      <div className="relative w-full h-56 overflow-hidden rounded-md">
         <Image
           src={musician.image}
           alt={musician.name}
           fill
-          className="
-                  object-cover object-center
-                  transition-transform duration-500
-                  group-hover:scale-110
-                "
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>

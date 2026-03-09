@@ -5,7 +5,8 @@
  * Серверные маршруты (используются для запросов)
  */
 export const API_ROUTES = {
-  BASE_API: process.env.NEXT_PUBLIC_API_URL!,
+  BASE_URL: process.env.NEXT_BASE_URL!,
+  BASE_API: "/api",
   ALBUMS: "/albums",
   MERCH: "/merch",
   TOURS: "/tours",

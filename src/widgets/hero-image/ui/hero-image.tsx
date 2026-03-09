@@ -10,6 +10,7 @@ export const HeroImage = () => {
           alt={"MainTextLogo"}
           width={1151}
           height={521}
+          priority={true}
         />
       </Container>
     </section>

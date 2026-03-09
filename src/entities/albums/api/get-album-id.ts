@@ -8,7 +8,7 @@ export const getAlbumId = async (id: string): Promise<IAlbum> => {
       throw new Error("Id альбома не передан");
     }
 
-    const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.ALBUMS}/${id}`;
+    const URL = `${API_ROUTES.BASE_URL}${API_ROUTES.BASE_API}${API_ROUTES.ALBUMS}/${id}`;
 
     if (!URL) {
       throw new Error("URL для получения туров не задан");
