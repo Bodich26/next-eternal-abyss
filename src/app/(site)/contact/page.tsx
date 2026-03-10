@@ -1,7 +1,53 @@
+import { Metadata } from "next";
 import { Container, eventsItem, otherLinks, Paragraph, Titles } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
 import Image from "next/image";
 import Link from "next/link";
+import { API_ROUTES, PUBLIC_ROUTES } from "@/../routes";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(API_ROUTES.BASE_URL),
+  title: "Eternal Abyss - Контакты",
+  description:
+    "Свяжитесь с Eternal Abyss для букинга концертов, сотрудничества и медиа-запросов.",
+  keywords: [
+    "eternal abyss contact",
+    "deathcore band booking",
+    "metal band contact",
+    "concert booking metal band",
+    "eternal abyss management",
+  ],
+  openGraph: {
+    title: "Eternal Abyss - Контакты",
+    description:
+      "Букинг концертов, сотрудничество и медиа-запросы Eternal Abyss.",
+    url: `${API_ROUTES.BASE_URL}${PUBLIC_ROUTES.CONTACT}`,
+    images: [
+      {
+        url: "/og-poster-2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Постер Eternal Abyss",
+      },
+    ],
+    locale: "ru_RU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eternal Abyss - Контакты",
+    description:
+      "Букинг концертов, сотрудничество и медиа-запросы Eternal Abyss.",
+    images: "/og-poster-2.jpg",
+  },
+  other: {
+    "vk:image": "/vk-image.jpg",
+    "vk:title": "Eternal Abyss - Контакты",
+    "vk:description":
+      "Букинг концертов, сотрудничество и медиа-запросы Eternal Abyss.",
+  },
+  robots: "index, follow",
+};
 
 export default function Contact() {
   return (

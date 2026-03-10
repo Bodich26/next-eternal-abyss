@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import "./globals.css";
+import { API_ROUTES } from "@/../routes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +24,7 @@ export const unifraktur = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_BASE_URL!),
+  metadataBase: new URL(API_ROUTES.BASE_URL),
   title: "Eternal Abyss - Official Deathcore Band Site",
   description:
     "Погрузись в хаос Eternal Abyss: deathcore-музыка, туры, мерч и многое другое. Испытай брутальные брейкдауны и вечные бездны из глубин Восточной Европы.",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Команда Eternal Abyss",
-      url: new URL(process.env.NEXT_BASE_URL!),
+      url: new URL(API_ROUTES.BASE_URL),
     },
   ],
   creator: "Eternal Abyss",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     title: "Eternal Abyss - Deathcore Band",
     description:
       "Открой музыку из самой тьмы — туры, концерты и эксклюзивный мерч ждут тебя.",
-    url: new URL(process.env.NEXT_BASE_URL!),
+    url: new URL(API_ROUTES.BASE_URL),
     siteName: "Eternal Abyss",
     images: [
       {
