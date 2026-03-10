@@ -1,6 +1,7 @@
 import z from "zod";
 
 export const tourFormSchema = z.object({
+  id: z.string(),
   date: z
     .string()
     .trim()

@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "@tanstack/react-form";
 import { tourFormSchema } from "./tour-form-schema";
 import { ITour } from "@/entities/tours/model/type";
+import { editTour } from "../api/actions";
 
 export const useTourForm = (initialData: ITour) => {
   const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
@@ -20,6 +21,7 @@ export const useTourForm = (initialData: ITour) => {
 
   const form = useForm({
     defaultValues: {
+      id: initialData?.date ?? "",
       date: initialData?.date ?? "",
       time: initialData?.time ?? "",
       location: initialData?.location ?? "",
@@ -31,7 +33,11 @@ export const useTourForm = (initialData: ITour) => {
       onSubmit: tourFormSchema,
     },
     onSubmit: async ({ value }) => {
-      await new Promise((res) => setTimeout(res, 1000));
+      const res = await editTour(value);
+
+      if (!res.success) {
+        console.error(res.error);
+      }
 
       console.log("Submitted:", value);
 

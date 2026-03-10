@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import tours from "@/entities/tours/model/tours.json";
 
 export async function GET(
-  _: NextRequest,
+  req: NextRequest,
   context: { params: Promise<{ id: string }> },
 ) {
   const { id } = await context.params;
@@ -15,7 +15,31 @@ export async function GET(
       );
     }
 
-    const currentTour = tours.find((tour) => tour.id === id);
+    const baseTour = tours.find((tour) => tour.id === id);
+    const changesStr = req.cookies.get("tourChanges")?.value;
+
+    let changes: any[] = [];
+
+    if (changesStr) {
+      try {
+        changes = JSON.parse(changesStr);
+      } catch {
+        changes = [];
+      }
+    }
+
+    const change = changes.find((c) => c.id === id);
+
+    if (change?.deleted) {
+      return NextResponse.json({ error: "Тур удалён" }, { status: 404 });
+    }
+
+    const currentTour = change
+      ? baseTour
+        ? { ...baseTour, ...change }
+        : change
+      : baseTour;
+
     if (!currentTour) {
       return NextResponse.json({ error: "Тур не найден" }, { status: 404 });
     }
