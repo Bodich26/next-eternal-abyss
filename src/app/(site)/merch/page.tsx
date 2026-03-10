@@ -7,7 +7,7 @@ import { API_ROUTES, PUBLIC_ROUTES } from "@/../routes";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(API_ROUTES.BASE_URL),
-    title: "Eternal Abyss - Мерч.",
+    title: "Eternal Abyss - Мерч",
     description:
       "Официальный мерч Eternal Abyss — футболки, худи и эксклюзивная одежда для фанатов deathcore и Metal",
     keywords: [
