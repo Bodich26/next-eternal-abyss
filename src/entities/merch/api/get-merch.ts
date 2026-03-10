@@ -6,7 +6,7 @@ export const getMerch = async ({
   isCached,
 }: MerchCached): Promise<IMerch[]> => {
   try {
-    const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.MERCH}`;
+    const URL = `${API_ROUTES.BASE_URL}${API_ROUTES.BASE_API}${API_ROUTES.MERCH}`;
 
     if (!URL) {
       throw new Error("URL для получения мерча не задан");

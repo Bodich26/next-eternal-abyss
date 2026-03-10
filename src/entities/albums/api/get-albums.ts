@@ -6,7 +6,7 @@ export const getAlbums = async ({
   isCached,
 }: AlbumCached): Promise<IAlbum[]> => {
   try {
-    const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.ALBUMS}`;
+    const URL = `${API_ROUTES.BASE_URL}${API_ROUTES.BASE_API}${API_ROUTES.ALBUMS}`;
 
     if (!URL) {
       throw new Error("URL для получения альбомов не задан");

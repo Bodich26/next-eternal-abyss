@@ -8,7 +8,7 @@ export const getMerchId = async (id: string): Promise<IMerch> => {
       throw new Error("Id мерча не передан");
     }
 
-    const URL = `${API_ROUTES.BASE_API}/${API_ROUTES.MERCH}/${id}`;
+    const URL = `${API_ROUTES.BASE_URL}${API_ROUTES.BASE_API}${API_ROUTES.MERCH}/${id}`;
 
     if (!URL) {
       throw new Error("URL для получения мерча не задан");
