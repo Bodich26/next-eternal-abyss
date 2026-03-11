@@ -3,7 +3,7 @@ import { Buttons, Inputs } from "@/shared";
 import { useNewsForm } from "../model/use-news-from";
 
 export const NewsForm = () => {
-  const { form, isSuccess, isError } = useNewsForm();
+  const { form, successMessage, errorMessage } = useNewsForm();
 
   return (
     <form
@@ -69,13 +69,15 @@ export const NewsForm = () => {
           />
         )}
       />
-      {isSuccess && (
+      {successMessage && (
         <div className="text-green-400 text-sm text-center">
-          Вы успешно подписались 🎉
+          {successMessage}
         </div>
       )}
-      {isError && (
-        <div className="text-red-400/80 text-sm text-center">{isError}</div>
+      {errorMessage && (
+        <div className="text-red-400/80 text-sm text-center">
+          {errorMessage}
+        </div>
       )}
     </form>
   );

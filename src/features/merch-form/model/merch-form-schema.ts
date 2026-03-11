@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const merchFormSchema = z.object({
+  id: z.string(),
   title: z
     .string()
     .trim()
