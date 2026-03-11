@@ -5,6 +5,7 @@ import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import "./globals.css";
 import { API_ROUTES } from "@/../routes";
+import { AdminButton } from "@/features/admin-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -106,6 +107,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="pt-[68px] flex-1">{children}</main>
+        <AdminButton />
         <Footer />
       </body>
     </html>
