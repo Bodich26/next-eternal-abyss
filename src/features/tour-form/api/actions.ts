@@ -1,8 +1,13 @@
 "use server";
-import { cookies } from "next/headers";
+import { PUBLIC_ROUTES } from "@/../routes";
 import { FormValues, tourFormSchema } from "../model/tour-form-schema";
+import { revalidatePath, updateTag } from "next/cache";
 
-export async function editTour(formData: FormValues) {
+type ActionResult =
+  | { success: true; message: string }
+  | { success: false; error: string };
+
+export async function editTour(formData: FormValues): Promise<ActionResult> {
   try {
     const parsed = tourFormSchema.safeParse(formData);
     if (!parsed.success) {
@@ -12,21 +17,10 @@ export async function editTour(formData: FormValues) {
       };
     }
 
-    const currentChanges = JSON.parse(
-      (await cookies()).get("tourChanges")?.value || "[]",
+    updateTag("tours");
+    revalidatePath(
+      `${PUBLIC_ROUTES.ADMIN}${PUBLIC_ROUTES.TOURS}/${formData.id}`,
     );
-
-    const updatedChanges = currentChanges.filter(
-      (t: any) => t.id !== parsed.data.id,
-    );
-    updatedChanges.push(parsed.data);
-
-    (await cookies()).set("tourChanges", JSON.stringify(updatedChanges), {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 1,
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-    });
 
     return {
       success: true,

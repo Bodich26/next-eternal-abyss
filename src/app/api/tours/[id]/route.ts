@@ -1,45 +1,14 @@
-import { NextRequest, NextResponse } from "next/server";
 import tours from "@/entities/tours/model/tours.json";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
-  req: NextRequest,
+  _: NextRequest,
   context: { params: Promise<{ id: string }> },
 ) {
-  const { id } = await context.params;
-
   try {
-    if (!id) {
-      return NextResponse.json(
-        { error: "Id тура не передан" },
-        { status: 400 },
-      );
-    }
+    const { id } = await context.params;
 
-    const baseTour = tours.find((tour) => tour.id === id);
-    const changesStr = req.cookies.get("tourChanges")?.value;
-
-    let changes: any[] = [];
-
-    if (changesStr) {
-      try {
-        changes = JSON.parse(changesStr);
-      } catch {
-        changes = [];
-      }
-    }
-
-    const change = changes.find((c) => c.id === id);
-
-    if (change?.deleted) {
-      return NextResponse.json({ error: "Тур удалён" }, { status: 404 });
-    }
-
-    const currentTour = change
-      ? baseTour
-        ? { ...baseTour, ...change }
-        : change
-      : baseTour;
-
+    const currentTour = tours.find((tour) => tour.id === id);
     if (!currentTour) {
       return NextResponse.json({ error: "Тур не найден" }, { status: 404 });
     }

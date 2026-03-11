@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const TourForm = ({ initialData }: Props) => {
-  const { form, isError, isSuccess } = useTourForm(initialData);
+  const { form, successMessage, errorMessage } = useTourForm(initialData);
 
   return (
     <form
@@ -212,13 +212,15 @@ export const TourForm = ({ initialData }: Props) => {
           )}
         />
       </div>
-      {isSuccess && (
+      {successMessage && (
         <div className="text-green-400 text-sm text-center">
-          Тур успешно сохранен!
+          {successMessage}
         </div>
       )}
-      {isError && (
-        <div className="text-red-400/80 text-sm text-center">{isError}</div>
+      {errorMessage && (
+        <div className="text-red-400/80 text-sm text-center">
+          {errorMessage}
+        </div>
       )}
     </form>
   );
