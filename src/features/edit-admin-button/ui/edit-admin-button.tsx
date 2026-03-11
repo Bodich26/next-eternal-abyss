@@ -13,9 +13,9 @@ export const EditAdminButton = ({ url, idUrl }: Props) => {
       absolute inset-0
       flex items-center justify-center
       bg-whites-200/30
-      opacity-0
+      lg:opacity-0
       transition-opacity duration-300
-      group-hover:opacity-100 rounded-md
+      lg:group-hover:opacity-100 rounded-md
       z-10
     "
     >
