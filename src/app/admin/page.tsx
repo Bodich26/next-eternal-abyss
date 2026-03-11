@@ -1,6 +1,6 @@
 import { adminNav, Container, Links } from "@/shared";
 import { HeroTitle } from "@/widgets/hero-title";
-
+export const dynamic = "force-dynamic";
 export default function Admin() {
   return (
     <>
