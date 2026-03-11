@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { BurgerButton } from "@/features/burger-button";
 import { useMobileMenu } from "../model/use-mobile-menu";
+import { PUBLIC_ROUTES } from "../../../../routes";
 
 export const Header = () => {
   const { toggleMenu, openMobileMenu } = useMobileMenu();
@@ -14,13 +15,15 @@ export const Header = () => {
     <header className="fixed top-0 left-0 w-full bg-blacks-100 shadow-block z-50 py-1.5 max-md:py-0">
       <Container>
         <div className="hidden justify-between items-center max-md:flex max-md:py-1.5">
-          <Image
-            className="hidden max-md:block"
-            src="/logo/logo.png"
-            alt="Logo"
-            width={58}
-            height={56}
-          />
+          <Link href={PUBLIC_ROUTES.HOME}>
+            <Image
+              className="hidden max-md:block"
+              src="/logo/logo.png"
+              alt="Logo"
+              width={58}
+              height={56}
+            />
+          </Link>
           <BurgerButton toggleMobileMenu={toggleMenu} />
         </div>
         <nav
@@ -55,14 +58,15 @@ export const Header = () => {
               );
             })}
           </ul>
-
-          <Image
-            className="block max-md:hidden"
-            src="/logo/logo.png"
-            alt="Logo"
-            width={58}
-            height={56}
-          />
+          <Link href={PUBLIC_ROUTES.HOME}>
+            <Image
+              className="block max-md:hidden"
+              src="/logo/logo.png"
+              alt="Logo"
+              width={58}
+              height={56}
+            />
+          </Link>
 
           <ul className="flex gap-8 items-center flex-wrap max-md:flex-col">
             {headerLinkRight.map((item, index) => {
