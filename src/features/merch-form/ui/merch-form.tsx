@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const MerchForm = ({ initialData }: Props) => {
-  const { form, isError, isSuccess } = useMerchForm(initialData);
+  const { form, errorMessage, successMessage } = useMerchForm(initialData);
   const { sizeInput, setSizeInput, handleAddSize, handleRemoveSize } =
     useToggleSizeMerch();
   return (
@@ -226,13 +226,15 @@ export const MerchForm = ({ initialData }: Props) => {
           )}
         />
       </div>
-      {isSuccess && (
+      {successMessage && (
         <div className="text-green-400 text-sm text-center">
-          Мерч успешно сохранен!
+          {successMessage}
         </div>
       )}
-      {isError && (
-        <div className="text-red-400/80 text-sm text-center">{isError}</div>
+      {errorMessage && (
+        <div className="text-red-400/80 text-sm text-center">
+          {errorMessage}
+        </div>
       )}
     </form>
   );

@@ -1,15 +1,15 @@
 "use server";
-import { PUBLIC_ROUTES } from "@/../routes";
-import { FormValues, tourFormSchema } from "../model/tour-form-schema";
 import { revalidatePath, updateTag } from "next/cache";
+import { PUBLIC_ROUTES } from "../../../../routes";
+import { albumFormSchema, FormValues } from "../model/album-form-schema";
 
 type ActionResult =
   | { success: true; message: string }
   | { success: false; error: string };
 
-export async function editTour(formData: FormValues): Promise<ActionResult> {
+export async function editAlbum(formData: FormValues): Promise<ActionResult> {
   try {
-    const parsed = tourFormSchema.safeParse(formData);
+    const parsed = albumFormSchema.safeParse(formData);
     if (!parsed.success) {
       return {
         success: false,
@@ -17,14 +17,14 @@ export async function editTour(formData: FormValues): Promise<ActionResult> {
       };
     }
 
-    updateTag("tours");
+    updateTag("albums");
     revalidatePath(
-      `${PUBLIC_ROUTES.ADMIN}${PUBLIC_ROUTES.TOURS}/${formData.id}`,
+      `${PUBLIC_ROUTES.ADMIN}${PUBLIC_ROUTES.ALBUMS}/${formData.id}`,
     );
 
     return {
       success: true,
-      message: "Тур успешно обновлен!",
+      message: "Альбом успешно обновлен!",
     };
   } catch (error) {
     return {

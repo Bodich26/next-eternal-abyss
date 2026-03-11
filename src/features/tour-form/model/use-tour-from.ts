@@ -6,22 +6,14 @@ import { ITour } from "@/entities/tours/model/type";
 import { editTour } from "../api/actions";
 
 export const useTourForm = (initialData: ITour) => {
-  const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
-  const [isError, setIsError] = React.useState<string>("");
-
-  React.useEffect(() => {
-    if (!isSuccess) return;
-
-    const timer = setTimeout(() => {
-      setIsSuccess(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [isSuccess]);
+  const [successMessage, setSuccessMessage] = React.useState<string | null>(
+    null,
+  );
+  const [errorMessage, setErrorMessage] = React.useState<string | null>(null);
 
   const form = useForm({
     defaultValues: {
-      id: initialData?.date ?? "",
+      id: initialData.id,
       date: initialData?.date ?? "",
       time: initialData?.time ?? "",
       location: initialData?.location ?? "",
@@ -33,18 +25,21 @@ export const useTourForm = (initialData: ITour) => {
       onSubmit: tourFormSchema,
     },
     onSubmit: async ({ value }) => {
+      setErrorMessage(null);
+      setSuccessMessage(null);
+
       const res = await editTour(value);
 
       if (!res.success) {
-        console.error(res.error);
+        setErrorMessage(res.error);
+        return;
       }
 
       console.log("Submitted:", value);
-
-      setIsSuccess(true);
+      setSuccessMessage(res.message);
       form.reset();
     },
   });
 
-  return { form, isSuccess, isError };
+  return { form, successMessage, errorMessage };
 };

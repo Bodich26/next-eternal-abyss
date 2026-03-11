@@ -3,23 +3,17 @@ import React from "react";
 import { useForm } from "@tanstack/react-form";
 import { merchFormSchema } from "./merch-form-schema";
 import { IMerch } from "@/entities/merch/model/type";
+import { editMerch } from "../api/actions";
 
 export const useMerchForm = (initialData: IMerch) => {
-  const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
-  const [isError, setIsError] = React.useState<string>("");
-
-  React.useEffect(() => {
-    if (!isSuccess) return;
-
-    const timer = setTimeout(() => {
-      setIsSuccess(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [isSuccess]);
+  const [successMessage, setSuccessMessage] = React.useState<string | null>(
+    null,
+  );
+  const [errorMessage, setErrorMessage] = React.useState<string | null>(null);
 
   const form = useForm({
     defaultValues: {
+      id: initialData.id,
       title: initialData?.title ?? "",
       price: initialData?.price ?? "",
       shortDescription: initialData?.shortDescription ?? "",
@@ -30,18 +24,25 @@ export const useMerchForm = (initialData: IMerch) => {
       onSubmit: merchFormSchema,
     },
     onSubmit: async ({ value }) => {
-      await new Promise((res) => setTimeout(res, 1000));
+      setErrorMessage(null);
+      setSuccessMessage(null);
+
+      const res = await editMerch(value);
+
+      if (!res.success) {
+        setErrorMessage(res.error);
+        return;
+      }
 
       console.log("Submitted:", value);
-
-      setIsSuccess(true);
+      setSuccessMessage(res.message);
       form.reset();
     },
   });
 
   return {
     form,
-    isSuccess,
-    isError,
+    successMessage,
+    errorMessage,
   };
 };

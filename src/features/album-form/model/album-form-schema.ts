@@ -1,6 +1,7 @@
 import z from "zod";
 
 export const albumFormSchema = z.object({
+  id: z.string(),
   title: z
     .string()
     .trim()
